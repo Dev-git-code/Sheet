@@ -1,0 +1,9 @@
+//array easy// Remove Duplicate elements --> two pointers and one condition
+//array easy// find missing number --> xor for later
+//array easy// find largest subarray of sum k --> using sliding window
+//array easy// number that appear once --> decrease space complexity
+//array easy// maximum consecutive ones --> gfg version using hashmap
+//array medium// majority element --> moores voting algorithm 
+//array medium// max subarray --> kadane's algorithm
+//array medium// next permutation --> linear time solution 
+//array medium// rotate matrix by 90 degree --> approach

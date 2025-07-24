@@ -1,0 +1,192 @@
+{
+  "main": {
+    "id": "bd36cc2cddff4fdc",
+    "type": "split",
+    "children": [
+      {
+        "id": "1d12fb37c20abad7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fb7d0ff5a70a9e81",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Sheet/Topics and Tags Index.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "18b163de741c4400",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Sheet/Leetcode Practice/Aditya Verma DP playlist.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "75db457b9deb1fef",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Revision and Practice Sheet.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "cf86bd0638dbfaf0",
+    "type": "split",
+    "children": [
+      {
+        "id": "a7b6ab230fdcebb5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0015c2201b13f155",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "b8d72763edd8dd3c",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "4901a3c60cfff026",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "ffc20f55c0c024f0",
+    "type": "split",
+    "children": [
+      {
+        "id": "07166375afdb261f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a2a56260b7cf54e9",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Revision and Practice Sheet.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "b472310f7edeed57",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Revision and Practice Sheet.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "ede9287658673385",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "b879a704fca2a2d9",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Revision and Practice Sheet.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "75db457b9deb1fef",
+  "lastOpenFiles": [
+    "Sheet/Topics and Tags Index.md",
+    "Revision and Practice Sheet.md",
+    "Sheet/Leetcode Practice/Aditya Verma DP playlist.md",
+    "Sheet/Leetcode Practice/Knapsack.md",
+    "Sheet/Leetcode Practice/Program that generates the memoization table for the above example.md",
+    "Sheet/Leetcode Practice/DP on Trees.md",
+    "Sheet/Leetcode Practice/Matrix Chain Multiplication.md",
+    "Untitled.md",
+    "Sheet/Contest Index.md",
+    "Sheet/Leetcode Practice Index.md",
+    "Sheet/Snippets.md",
+    "Sheet/Leetcode Practice/Sliding Window Practice.md",
+    "Sheet/Leetcode Practice/Sliding window Aditya verma.md",
+    "Sheet/Leetcode Practice/Aditya Verma Recursion Playlist.md",
+    "Sheet/Sheet Index.md"
+  ]
+}

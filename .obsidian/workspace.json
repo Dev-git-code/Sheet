@@ -1,0 +1,232 @@
+{
+  "main": {
+    "id": "bf1eec0335936a7d",
+    "type": "split",
+    "children": [
+      {
+        "id": "87b4be600e460bbd",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "091348b90490e5b2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "AtoZ Sheet/DSA SHEET A to Z.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "DSA SHEET A to Z"
+            }
+          },
+          {
+            "id": "dc674278d9860d52",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Setup.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "Setup"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "10020446877b02e1",
+    "type": "split",
+    "children": [
+      {
+        "id": "1c72af4f70a9354a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2eff09740bc35e93",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "864a491eeea2f918",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "71d30c78c5a50322",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "5ffdc532e2084318",
+    "type": "split",
+    "children": [
+      {
+        "id": "ac2690d26c511ae0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b655bdb5a537c4bc",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "AtoZ Sheet/Print patterns.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Print patterns"
+            }
+          },
+          {
+            "id": "cfed8e0f7fa39219",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "AtoZ Sheet/Print patterns.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Print patterns"
+            }
+          },
+          {
+            "id": "6bdc6c4479ada45f",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "77d5e4fc00adcb12",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "AtoZ Sheet/Print patterns.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Print patterns"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "dc674278d9860d52",
+  "lastOpenFiles": [
+    "AtoZ Sheet/DSA SHEET A to Z.md",
+    "Setup.md",
+    "Sheet/Sheet/DP notes/Aditya Verma Recursion Playlist.md",
+    "Sheet/Topics and Tags Index.md",
+    "Topics/Sorting.md",
+    "Topics/Binary Search.md",
+    "Topics/Topics Index.md",
+    "Sheet/Sheet/Sheet/Questions/Longest Common Prefix.md",
+    "Sheet/Sheet/Sheet/Questions/Longest Consecutive Sequence in an Array.md",
+    "Sheet/Sheet/Sheet/Concepts/Binary Search.md",
+    "Topics",
+    "AtoZ Sheet/Index.md",
+    "Sliding window Aditya verma.md",
+    "Sheet/Revision and Practice Sheet.md",
+    "Sheet/Sheet/Snippets.md",
+    "Sheet/Sheet/Sheet Index.md",
+    "Sheet/Sheet/Sheet/Questions/2Sum Problem.md",
+    "Sheet/Sheet/Sheet/Questions/Majority Element.md",
+    "Sheet/Sheet/Sheet/Questions/Leaders in an Array problem.md",
+    "Sheet/Sheet/Sheet/Questions/Koko Eating Bananas.md",
+    "Sheet/Sheet/Sheet/Questions/Kadane’s Algorithm, maximum subarray sum.md",
+    "Sheet/Sheet/Sheet/Questions/fruits into baskets.md",
+    "Sheet/Sheet/Sheet/Concepts/Template for Sliding Window.md",
+    "Sheet/Sheet/Contest Index.md",
+    "Sheet/Sheet/Sheet/Concepts/Sliding Window.md",
+    "Sheet/Sheet/Leetcode Practice/Maximum Score After Splitting a String.md",
+    "Sheet/Sheet/Leetcode Practice/Learn new topics to solve these questions.md",
+    "Sheet/Sheet/Sheet/Concepts/Pasted image 20231229211941.png",
+    "local_images/0ea67639e44e4e9c720c182128c56ad5_MD5.jpeg",
+    "Pasted image 20250609133634.png",
+    "Pasted image 20250609133612.png",
+    "local_images/3b0da588668947394dfbd6369aa3a610_MD5.jpeg",
+    "Pasted image 20250609133108.png",
+    "Pasted image 20250609133023.png",
+    "Sheet/Sheet/Leetcode Practice/4.2 All Pairs Shortest Path (Floyd-Warshall) - Dynamic Programming 11-23 screenshot 1.png",
+    "Sheet/Sheet/Leetcode Practice/4.2 All Pairs Shortest Path (Floyd-Warshall) - Dynamic Programming 6-27 screenshot 1.png",
+    "Sheet/Sheet/Leetcode Practice/4.1 MultiStage Graph - Dynamic Programming 0-38 screenshot.png",
+    "local_images",
+    "New folder",
+    "AtoZ Sheet",
+    "Sheet/Basics/sort an array.pdf"
+  ]
+}
