@@ -17,7 +17,7 @@ description: "This playlist explains Recursion in a concise way. Explaining how 
 url: "https://youtube.com/playlist?list=PL_z_8CaSLPWeT1ffjiImo0sYTcnLzo-wY&si=mOmyqGMl8c9WVGqi"
 ```
 
-#### 💡 General Template for Writing Recursion Using Induction
+# 💡 General Template for Writing Recursion Using Induction
 
 ```cpp
 	ReturnType functionName(Parameters) {
