@@ -1,5 +1,6 @@
 [
   "image-converter",
   "automatic-table-of-contents",
-  "obsidian-link-embed"
+  "obsidian-link-embed",
+  "obsidian-git"
 ]

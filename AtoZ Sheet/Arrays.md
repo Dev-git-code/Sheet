@@ -12,6 +12,15 @@ debugInConsole: false # Print debug info in Obsidian console
 ### 1. Second Largest Element in a array
 
 ```embed
+title: "Find Second Largest Element in Array | Remove duplicates from Sorted Array | Arrays Intro Video"
+image: "https://i.ytimg.com/vi/37E9ckMDdTk/maxresdefault.jpg"
+description: "Check out TUF+:https://takeuforward.org/plus?source=youtubeFind DSA, LLD, OOPs, Core Subjects, 1000+ Premium Questions company wise, Aptitude, SQL, AI doubt ..."
+url: "https://youtu.be/37E9ckMDdTk?list=PLgUwDviBIf0oF6QL8m22w1hIDC1vJ_BHz&t=398"
+favicon: ""
+aspectRatio: "56.25"
+```
+
+```embed
 title: "Second Largest | Practice | GeeksforGeeks "
 image: "https://media.geeksforgeeks.org/wp-content/cdn-uploads/gfg_200x200-min.png"
 description: "Given an array of positive integers arr[], return the second largest element from the array. If the second largest element doesn't exist then return -1. Note: The second largest element should not be equal to the largest element. Examples: Input: arr"
@@ -21,26 +30,26 @@ aspectRatio: "100"
 ```
 
 ```cpp 
-int getSecondLargest(vector<int> &arr) {
-       
-       int maxe = -1;
-       int s_max = -1;
-        
-        for(int i = 0;i<arr.size();i++){
-            if(arr[i]<maxe && arr[i]>s_max){ // current max se chota prev max se bda
-                s_max = arr[i];
-            }
-            
-            if(maxe<arr[i]){
-                s_max = maxe; // prev maximum 
-                maxe = arr[i];
-            }
-            
+int getSecondLargest(int *arr, int n) {
+    // code here
+    int largest = -1; //INT_MIN
+    int second_largest = -1; //INT_MIN
+    
+    for(int i = 0; i<n;i++){
+        if(arr[i]>largest){
+            second_largest = largest;
+            largest = arr[i];
+        }else if (arr[i]<largest && arr[i]>second_largest){
+            second_largest = arr[i];
         }
-        
-        return s_max;
     }
+    
+    //if(second_largest==INT_MIN) return -1;
+    return second_largest;
+}
 ```
+- the above code will not work for the case `[10, INT_MIN, 10]`
+- can think about if the array has negative as well as repeating elements. 
 
 ### 2. Check if Array Is Sorted and Rotated
 
@@ -55,21 +64,23 @@ aspectRatio: "52"
 
 ```cpp 
  bool check(vector<int>& nums) {
-      int count = 0;
-      int n = nums.size();
-      for(int i = 0;i<n;i++){
-        if(nums[i] > nums[(i+1)%n]){ //%n is used to compare last ele with first
-            count ++;
-        }
-      }
-
-      return count<=1; //nums = [1, 1, 1, 1] for this case < is used
-    }
+	  int count = 0;
+	  int n = nums.size();
+	  for(int i = 0;i<n;i++){ // iterate using the complete indexes of the array! so that last can be compared with first.
+		if(nums[i] > nums[(i+1)%n]){ //%n is used to compare last ele with first
+			count ++;
+		}
+	  }
+	
+	  return count<=1; //nums = [1, 1, 1, 1] for this case < is used
+}
 
 ```
 
-#### 🧠 **What to Remember:**
-
 - A **rotated sorted array** has **at most one drop** where `nums[i] > nums[i+1]` (including circular check).
 - If count of such drops is ≤ 1 → array is valid rotated sorted.
+
+
+
+
 
