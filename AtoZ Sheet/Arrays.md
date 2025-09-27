@@ -116,4 +116,18 @@ int removeDuplicates(vector<int>& nums) {
 }
 ```
 
+- Optimal solution is two pointer approach 
+
+```cpp 
+ int removeDuplicates(vector<int>& nums) {
+        int n = nums.size();
+        int i = 0;
+        for(int j = 1;j<n;j++){
+            if(nums[i]!=nums[j]){
+                nums[++i] = nums[j];
+            }
+        }
+        return i+1;
+}
+```
 
