@@ -81,6 +81,7 @@ aspectRatio: "52"
 - If count of such drops is ≤ 1 → array is valid rotated sorted.
 
 ### 3. Remove Duplicated from Sorted Array
+
 ```embed
 title: "Find Second Largest Element in Array | Remove duplicates from Sorted Array | Arrays Intro Video"
 image: "https://i.ytimg.com/vi/37E9ckMDdTk/maxresdefault.jpg"
@@ -131,4 +132,3 @@ int removeDuplicates(vector<int>& nums) {
 }
 ```
 
-f
