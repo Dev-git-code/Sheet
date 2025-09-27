@@ -79,7 +79,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 286.5
   },
   "right": {
     "id": "5ffdc532e2084318",
@@ -114,12 +114,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "AtoZ Sheet/Print patterns.md",
+                "file": "AtoZ Sheet/Arrays.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Print patterns"
+              "title": "Outgoing links from Arrays"
             }
           },
           {
@@ -143,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "AtoZ Sheet/Print patterns.md",
+                "file": "AtoZ Sheet/Arrays.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Print patterns"
+              "title": "Outline of Arrays"
             }
           },
           {
@@ -163,11 +163,12 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 289.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -181,7 +182,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2eff09740bc35e93",
+  "active": "f3d8f51972f12855",
   "lastOpenFiles": [
     "AtoZ Sheet/1Index.md",
     "AtoZ Sheet/Arrays.md",
