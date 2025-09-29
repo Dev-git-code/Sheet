@@ -155,6 +155,7 @@ aspectRatio: "52"
 
 ```cpp 
 // Brute 
+// dry run [1,2,3,4,5,6,7]
 void rotate(vector<int>& nums, int k) {
 	int n = nums.size();
 	vector<int> temp;
@@ -176,4 +177,20 @@ void rotate(vector<int>& nums, int k) {
 }
 ```
 
+- **Optimal** : The function `reverse(first, last)` in `<algorithm>` reverses the elements in the **half-open range**:
+	`[first, last)   // inclusive of first, exclusive of last`
+```cpp
+// based on observation // ratta maar
+// dry run [1,2,3,4,5,6,7]
+void rotate(vector<int>& nums, int k) {
+	int n = nums.size();
+	reverse(nums.begin(), nums.begin()+n-k); // reverse the first n-k elements
+	// [4,3,2,1,5,6,7]
+	reverse(nums.begin()+n-k, nums.end());
+	// [4,3,2,1,7,6,5]
+	reverse(nums.begin(), nums.end()); 
+	// [5,6,7,1,2,3,4]
+}
+```
 
+### 5. 
