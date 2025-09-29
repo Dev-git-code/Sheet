@@ -132,4 +132,14 @@ int removeDuplicates(vector<int>& nums) {
 }
 ```
 
-### 
+### 4. Left Rotate the array by 'D' places 
+
+```embed
+title: "Rotate Array by K places | Union, Intersection of Sorted Arrays | Move Zeros to End | Arrays Part-2"
+image: "https://i.ytimg.com/vi/wvcQg43_V8U/maxresdefault.jpg"
+description: "Check out TUF+:https://takeuforward.org/plus?source=youtubeFind DSA, LLD, OOPs, Core Subjects, 1000+ Premium Questions company wise, Aptitude, SQL, AI doubt ..."
+url: "https://youtu.be/wvcQg43_V8U?list=PLgUwDviBIf0oF6QL8m22w1hIDC1vJ_BHz&t=494"
+favicon: ""
+aspectRatio: "56.25"
+```
+
