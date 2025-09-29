@@ -193,4 +193,4 @@ void rotate(vector<int>& nums, int k) {
 }
 ```
 
-### 5. 
+### 5.  
