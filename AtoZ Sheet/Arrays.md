@@ -217,5 +217,28 @@ aspectRatio: "52"
 - Optimal solution uses two pointer approach: 
 
 ```cpp 
+ // dry run [1,2,0,3,4,0,0,0,5,6]
+void moveZeroes(vector<int>& nums) {
+	int n = nums.size();
+	int j = -1;
 
+	for(int i = 0;i<n;i++){
+		if(nums[i] == 0){
+			j = i;
+			break;
+		}
+	}
+	// j = 2
+    if(j == -1) return; // for case [1] or if there are no zeroes in the entire nums
+	for(int i = j+1;i<n;i++){
+		if(nums[i] != 0){                                 
+			swap(nums[i], nums[j]); //swap(0,3) => [1,2,3,0,4,0,0,0,5,6] .. 
+			j++; //j = 3 .. 
+		}
+	}
+
+}
 ```
+
+
+
