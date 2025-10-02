@@ -230,7 +230,7 @@ void moveZeroes(vector<int>& nums) {
 	}
 	// j = 2
     if(j == -1) return; // for case [1] or if there are no zeroes in the entire nums
-	for(int i = j+1;i<n;i++){
+	for(int i = j+1;i<n;i++){ // j will always point to the zero 
 		if(nums[i] != 0){                                 
 			swap(nums[i], nums[j]); //swap(0,3) => [1,2,3,0,4,0,0,0,5,6] .. 
 			j++; //j = 3 .. 
@@ -239,6 +239,5 @@ void moveZeroes(vector<int>& nums) {
 
 }
 ```
-
 
 
