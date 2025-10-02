@@ -480,5 +480,24 @@ int missingNumber(vector<int>& nums) {
 }
 ```
 
-### 9. 
+### 9. Single Number
 
+```embed
+title: "Find element that appears once | Find missing number | Max Consecutive number of 1's | Arrays Part-3"
+image: "https://i.ytimg.com/vi/bYWLJb3vCWY/maxresdefault.jpg"
+description: "Check out TUF+:https://takeuforward.org/plus?source=youtubeFind DSA, LLD, OOPs, Core Subjects, 1000+ Premium Questions company wise, Aptitude, SQL, AI doubt ..."
+url: "https://youtu.be/bYWLJb3vCWY?list=PLgUwDviBIf0oF6QL8m22w1hIDC1vJ_BHz&t=1507"
+favicon: ""
+aspectRatio: "56.25"
+```
+
+```embed
+title: "Single Number - LeetCode"
+image: "https://leetcode.com/static/images/LeetCode_Sharing.png"
+description: "Can you solve this real interview question? Single Number - Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.  You must implement a solution with a linear runtime complexity and use only constant extra space.     Example 1:  Input: nums = [2,2,1]  Output: 1  Example 2:  Input: nums = [4,1,2,1,2]  Output: 4  Example 3:  Input: nums = [1]  Output: 1     Constraints:   * 1 <= nums.length <= 3 * 104  * -3 * 104 <= nums[i] <= 3 * 104  * Each element in the array appears twice except for one element which appears only once."
+url: "https://leetcode.com/problems/single-number/description/"
+favicon: ""
+aspectRatio: "52"
+```
+
+- the brute force uses nested for loop checking the count of each element.
