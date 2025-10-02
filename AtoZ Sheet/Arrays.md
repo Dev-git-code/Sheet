@@ -349,3 +349,29 @@ aspectRatio: "100"
 ```
 
 - Optimal approach is based on two pointers
+```cpp 
+vector<int> intersection(vector<int> &a, vector<int> &b) {
+        //optimal approach 
+        int n1 = a.size();
+        int n2 = b.size();
+        vector<int> intersectArr;
+        int i = 0, j = 0;
+        
+        while(i<n1 && j<n2){
+            if(a[i] < b[j]) i++;
+            else if(b[j] < a[i]) j++;
+            else if(a[i] == b[j]) {
+                if(intersectArr.size() == 0 || intersectArr.back()!=a[i]){
+                    intersectArr.push_back(a[i]);
+                }
+                i++;
+                j++;
+            }
+        }
+        
+        return intersectArr;
+}
+```
+
+
+
