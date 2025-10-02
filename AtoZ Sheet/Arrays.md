@@ -9,6 +9,7 @@ includeLinks: true # Make headings clickable
 hideWhenEmpty: false # Hide TOC if no headings are found
 debugInConsole: false # Print debug info in Obsidian console
 ```
+## Easy 
 ### 1. Second Largest Element in a array
 
 ```embed
@@ -501,3 +502,24 @@ aspectRatio: "52"
 ```
 
 - the brute force uses nested for loop checking the count of each element.
+- the better approach uses unordered map.
+
+```cpp 
+ int singleNumber(vector<int>& nums) {
+	unordered_map<int, int> countMap;
+	for(int i = 0;i<nums.size();i++){
+		countMap[nums[i]]++;
+	}
+
+	for(auto it: countMap){
+		if(it.second == 1){
+			return it.first;
+		}
+	}
+
+	return -1;
+}
+```
+
+- the optimal approach uses the `xor` operation since `num^num = 0`
+
