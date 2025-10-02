@@ -408,3 +408,22 @@ aspectRatio: "52"
 }
 ```
 
+```cpp
+// Brute force using nested loops checking for each number.
+int missingNumber(vector<int>& nums) {
+      int n = nums.size();
+      for(int i = 0;i<=n;i++){
+        bool exists = false;
+        for(int j = 0;j<n;j++){
+            if(nums[j] == i){
+                exists = true;
+                break;
+            }
+        }
+        if(exists == false){
+            return i;
+        }
+      }
+      return -1;
+}
+```
