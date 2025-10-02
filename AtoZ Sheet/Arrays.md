@@ -301,4 +301,51 @@ vector<int> findUnion(vector<int> &a, vector<int> &b) {
 }
 ```
 
->
+### 7. Intersection of two sorted arrays
+
+```embed
+title: "Rotate Array by K places | Union, Intersection of Sorted Arrays | Move Zeros to End | Arrays Part-2"
+image: "https://i.ytimg.com/vi/wvcQg43_V8U/maxresdefault.jpg"
+description: "Check out TUF+:https://takeuforward.org/plus?source=youtubeFind DSA, LLD, OOPs, Core Subjects, 1000+ Premium Questions company wise, Aptitude, SQL, AI doubt ..."
+url: "https://youtu.be/wvcQg43_V8U?list=PLgUwDviBIf0oF6QL8m22w1hIDC1vJ_BHz&t=3548"
+favicon: ""
+aspectRatio: "56.25"
+```
+
+
+```embed
+title: "Intersection of two sorted arrays | Practice | GeeksforGeeks "
+image: "https://media.geeksforgeeks.org/wp-content/cdn-uploads/gfg_200x200-min.png"
+description: "Given two sorted arrays arr1[] and arr2[]. Your task is to return the intersection of both arrays.Intersection of two arrays is said to be elements that are common in both arrays.&nbsp;The intersection should not count duplicate elements.Note: If the"
+url: "https://www.geeksforgeeks.org/problems/intersection-of-two-sorted-array-1587115620/1"
+favicon: ""
+aspectRatio: "100"
+```
+
+- In the problem, duplicate elements are not allowed but in the video solutions duplicated elements are allowed in the result array.
+- Brute forces uses nested for loop
+```cpp 
+ vector<int> intersection(vector<int> &a, vector<int> &b) {
+       // brute force 
+       int n1 = a.size();
+       int n2 = b.size();
+       
+       vector<int> visited(n2, 0);
+       vector<int> intersect_arr;
+       
+       for(int i = 0;i<n1;i++){
+           for(int j = 0;j<n2;j++){
+               if(a[i] == b[j] && visited[j] == 0){
+                   if(intersect_arr.size() == 0 || intersect_arr.back() != b[j]){ // to not allow duplicated elements 
+                        intersect_arr.push_back(b[j]);
+                        visited[j] = 1;
+                   }
+               }
+           }
+       }
+       
+       return intersect_arr;
+}
+```
+
+- Optimal approach is based on two pointers
