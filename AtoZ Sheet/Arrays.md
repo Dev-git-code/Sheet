@@ -395,6 +395,7 @@ favicon: ""
 aspectRatio: "52"
 ```
 
+- In brute force we can either sort the array or else we can use nested loop to check each number.
 ```cpp 
 // Brute force -- My solution
  int missingNumber(vector<int>& nums) {
@@ -426,4 +427,44 @@ int missingNumber(vector<int>& nums) {
       }
       return -1;
 }
+```
+
+- The better approach involves hashing 
+```cpp 
+int missingNumber(vector<int>& nums) {
+        int n = nums.size();
+        vector<int> existsArr(n+1,0); //hash array
+
+        for(int i = 0;i<n;i++){
+            existsArr[nums[i]] = 1;
+        }
+
+        for(int i = 0;i<=n;i++){
+            if(existsArr[i] == 0) return i;
+        }
+
+        return -1;
+}
+```
+
+- The optimal approach is to use sum or xor operation. ( the xor approach with only one for loop works better.)
+
+```cpp 
+// sum based optimal approach
+int missingNumber(vector<int>& nums) {
+        int n = nums.size();
+        long sum = n*(n+1)/2;
+        int arrSum = 0;
+
+        for(int i = 0;i<n;i++){
+            arrSum += nums[i];
+        }
+
+        return sum - arrSum;
+
+}
+```
+
+```cpp 
+// XOR based sum approach 
 ```
