@@ -264,5 +264,41 @@ aspectRatio: "100"
 - optimal approach is based on two pointer method
 
 ```cpp 
+ void checkAndPushIntoUnionArr(vector<int> &union_arr, int ele){
+	if(union_arr.size()==0 || union_arr.back() != ele){
+		union_arr.push_back(ele);
+	}
+}
+    
+vector<int> findUnion(vector<int> &a, vector<int> &b) {
 
+	int a_size = a.size();
+	int b_size = b.size();
+	vector<int> union_arr;
+	int i = 0, j = 0;
+	
+	while (i<a_size && j<b_size){
+		if(a[i] <= b[j]){
+			checkAndPushIntoUnionArr(union_arr, a[i]);
+			i++;
+		}else{
+			checkAndPushIntoUnionArr(union_arr, b[j]);
+			j++;
+		}
+	}
+	
+	while(i<a_size){
+		checkAndPushIntoUnionArr(union_arr, a[i]);
+		i++;
+	}
+	
+	 while(j<b_size){
+		checkAndPushIntoUnionArr(union_arr, b[j]);
+		j++;
+	}
+	
+	return union_arr;
+}
 ```
+
+>
