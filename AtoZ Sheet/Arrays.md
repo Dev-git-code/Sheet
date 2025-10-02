@@ -466,5 +466,6 @@ int missingNumber(vector<int>& nums) {
 ```
 
 ```cpp 
-// XOR based sum approach 
+// XOR based approach 
+
 ```
