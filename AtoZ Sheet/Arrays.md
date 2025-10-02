@@ -451,7 +451,7 @@ int missingNumber(vector<int>& nums) {
 // sum based optimal approach
 int missingNumber(vector<int>& nums) {
 	int n = nums.size();
-	long sum = n*(n+1)/2;
+	long sum = n*(n+1)/2; // this can go to long there taking more space than xor based approach
 	int arrSum = 0;
 
 	for(int i = 0;i<n;i++){
@@ -464,7 +464,7 @@ int missingNumber(vector<int>& nums) {
 ```
 
 ```cpp 
-// XOR based approach 
+// XOR based approach using the fact : num^num = 0
 int missingNumber(vector<int>& nums) {
 	int n = nums.size();
 	int xorArr = 0;
