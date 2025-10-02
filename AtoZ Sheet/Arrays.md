@@ -373,9 +373,7 @@ vector<int> intersection(vector<int> &a, vector<int> &b) {
 }
 ```
 
-
-
-### 7. Find the missing Number 
+### 8. Find the missing Number 
 
 ```embed
 title: "Find element that appears once | Find missing number | Max Consecutive number of 1's | Arrays Part-3"
@@ -399,73 +397,88 @@ aspectRatio: "52"
 ```cpp 
 // Brute force -- My solution
  int missingNumber(vector<int>& nums) {
-       int n = nums.size();
-       sort(nums.begin(), nums.end());
-       for(int i = 0;i<n;i++){
-        if(nums[i]!=i) return i;
-       } 
+   int n = nums.size();
+   sort(nums.begin(), nums.end());
+   for(int i = 0;i<n;i++){
+	if(nums[i]!=i) return i;
+   } 
 
-       return n;
+   return n;
 }
 ```
 
 ```cpp
 // Brute force using nested loops checking for each number.
 int missingNumber(vector<int>& nums) {
-      int n = nums.size();
-      for(int i = 0;i<=n;i++){
-        bool exists = false;
-        for(int j = 0;j<n;j++){
-            if(nums[j] == i){
-                exists = true;
-                break;
-            }
-        }
-        if(exists == false){
-            return i;
-        }
-      }
-      return -1;
+  int n = nums.size();
+  for(int i = 0;i<=n;i++){
+	bool exists = false;
+	for(int j = 0;j<n;j++){
+		if(nums[j] == i){
+			exists = true;
+			break;
+		}
+	}
+	if(exists == false){
+		return i;
+	}
+  }
+  return -1;
 }
 ```
 
 - The better approach involves hashing 
 ```cpp 
 int missingNumber(vector<int>& nums) {
-        int n = nums.size();
-        vector<int> existsArr(n+1,0); //hash array
+	int n = nums.size();
+	vector<int> existsArr(n+1,0); //hash array
 
-        for(int i = 0;i<n;i++){
-            existsArr[nums[i]] = 1;
-        }
+	for(int i = 0;i<n;i++){
+		existsArr[nums[i]] = 1;
+	}
 
-        for(int i = 0;i<=n;i++){
-            if(existsArr[i] == 0) return i;
-        }
+	for(int i = 0;i<=n;i++){
+		if(existsArr[i] == 0) return i;
+	}
 
-        return -1;
+	return -1;
 }
 ```
 
-- The optimal approach is to use sum or xor operation. ( the xor approach with only one for loop works better.)
+- The optimal approach is to use sum or `xor` operation. ( the `xor` approach with only one for loop works better.)
 
 ```cpp 
 // sum based optimal approach
 int missingNumber(vector<int>& nums) {
-        int n = nums.size();
-        long sum = n*(n+1)/2;
-        int arrSum = 0;
+	int n = nums.size();
+	long sum = n*(n+1)/2;
+	int arrSum = 0;
 
-        for(int i = 0;i<n;i++){
-            arrSum += nums[i];
-        }
+	for(int i = 0;i<n;i++){
+		arrSum += nums[i];
+	}
 
-        return sum - arrSum;
+	return sum - arrSum;
 
 }
 ```
 
 ```cpp 
 // XOR based approach 
+int missingNumber(vector<int>& nums) {
+	int n = nums.size();
+	int xorArr = 0;
+	int xorNum = 0;
+	for(int i = 0;i<n;i++){
+		xorArr = xorArr^nums[i];
+		xorNum = xorNum^i;
+	}
 
+	xorNum = xorNum^n;
+	return xorArr^xorNum;
+
+}
 ```
+
+### 9. 
+
