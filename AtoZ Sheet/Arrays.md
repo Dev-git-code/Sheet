@@ -240,4 +240,29 @@ void moveZeroes(vector<int>& nums) {
 }
 ```
 
+### 6. Union of 2 Sorted Arrays
 
+```embed
+title: "Rotate Array by K places | Union, Intersection of Sorted Arrays | Move Zeros to End | Arrays Part-2"
+image: "https://i.ytimg.com/vi/wvcQg43_V8U/maxresdefault.jpg"
+description: "Check out TUF+:https://takeuforward.org/plus?source=youtubeFind DSA, LLD, OOPs, Core Subjects, 1000+ Premium Questions company wise, Aptitude, SQL, AI doubt ..."
+url: "https://youtu.be/wvcQg43_V8U?list=PLgUwDviBIf0oF6QL8m22w1hIDC1vJ_BHz&t=3012"
+favicon: ""
+aspectRatio: "56.25"
+```
+
+```embed
+title: "Union of 2 Sorted Arrays | Practice | GeeksforGeeks "
+image: "https://media.geeksforgeeks.org/wp-content/cdn-uploads/gfg_200x200-min.png"
+description: "Given two sorted&nbsp;arrays&nbsp;a[]&nbsp;and&nbsp;b[], where each array may contain duplicate&nbsp;elements , the task is to return the elements in the&nbsp;union of the two arrays in sorted order.Union of two arrays can be defined as the set conta"
+url: "https://www.geeksforgeeks.org/problems/union-of-two-sorted-arrays-1587115621/1"
+favicon: ""
+aspectRatio: "100"
+```
+
+- the brute force is simple just use set to solve the problem.
+- optimal approach is based on two pointer method
+
+```cpp 
+
+```
