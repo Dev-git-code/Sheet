@@ -523,3 +523,14 @@ aspectRatio: "52"
 
 - the optimal approach uses the `xor` operation since `num^num = 0`
 
+```cpp 
+int singleNumber(vector<int>& nums) {
+	int xorNums = 0;
+	for(int i = 0;i<nums.size();i++){
+		xorNums = xorNums ^ nums[i];
+	}
+	return xorNums;
+}
+```
+
+### 10. 
