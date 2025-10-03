@@ -533,7 +533,7 @@ int singleNumber(vector<int>& nums) {
 }
 ```
 
-### 10. Longest Subarray with sum K (only positives)
+### 10. Longest Subarray with sum K
 
 ```embed
 title: "Longest Subarray with sum K | Brute - Better - Optimal | Generate Subarrays"
@@ -634,7 +634,33 @@ int longestSubarray(vector<int>& arr, int k) {
 	  }
    }
    return longestLen;
-}
+} // this is the optimal solutions for all numbers.
 ```
 
+- If there are only non-negative numbers then use sliding window for optimal solution.
+```cpp 
+int longestSubarray(vector<int>& arr, int k) {
+   int n = arr.size();
+   int sum = 0;
+   int l = 0;
+   int longestLen = 0;
    
+   for(int r = 0;r<n;r++){
+	   sum += arr[r]; // add the right element
+	   while(l<=r && sum > k){ // remove the left elements
+		   sum -= arr[l];
+		   l++;
+	   }
+	   if(sum == k) longestLen = max(longestLen, r-l+1); // find the max length
+	   
+   }
+   
+   return longestLen;
+} // this code is different from video but uses the same idea ( video code is un-neccessarily complex)
+```
+
+
+## Medium 
+
+
+
