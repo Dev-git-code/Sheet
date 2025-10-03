@@ -544,3 +544,54 @@ favicon: ""
 aspectRatio: "56.25"
 ```
 
+```embed
+title: "Longest Subarray with Sum K | Practice | GeeksforGeeks "
+image: "https://media.geeksforgeeks.org/wp-content/cdn-uploads/gfg_200x200-min.png"
+description: "Given an array arr[] containing integers and an integer k, your task is to find the length of the longest subarray where the sum of its elements is equal to the given value&nbsp;k. If there is no subarray with sum equal to&nbsp;k, return 0. Examples:"
+url: "https://www.geeksforgeeks.org/problems/longest-sub-array-with-sum-k0809/1"
+favicon: ""
+aspectRatio: "100"
+```
+
+- The brute force uses 3 nested loop, straight forward approach.
+```cpp 
+int longestSubarray(vector<int>& arr, int k) {
+   int n = arr.size();
+   int longestLen = 0;
+   for(int i = 0;i<n;i++){
+	   for(int j = i;j<n;j++){
+		   int sum = 0;
+		   for(int l = i;l<=j;l++){
+			   sum += arr[l];
+		   }
+		   if(sum == k){
+				  longestLen = max(longestLen, j-i+1);
+		   }
+	   }
+   }
+   return longestLen;
+	
+}
+```
+
+- For better brute instead of using another loop for calculating the sum, just use the new j element only.
+
+```cpp 
+int longestSubarray(vector<int>& arr, int k) {
+   int n = arr.size();
+   int longestLen = 0;
+   for(int i = 0;i<n;i++){
+	   int sum = 0;
+	   for(int j = i;j<n;j++){
+		   sum += arr[j];
+		   if(sum == k){
+				longestLen = max(longestLen, j-i+1);
+		   }
+	   }
+   }
+   return longestLen;
+        
+}
+```
+
+ 
