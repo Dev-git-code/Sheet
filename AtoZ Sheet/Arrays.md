@@ -616,5 +616,25 @@ int longestSubarray(vector<int>& arr, int k) {
 ```
 
 - For the above code to work for array having zeroes, the map should not be updated for values of sum already in the map.
+```cpp 
+int longestSubarray(vector<int>& arr, int k) {
+   int n = arr.size();
+   int longestLen = 0;
+   unordered_map<int, int> prefixSumMap;
+   int sum = 0;
+   for(int i = 0;i<n;i++){
+	  sum += arr[i];
+	  if(sum == k ) longestLen = max(longestLen, i+1);
+	  int key = sum - k;
+	  if(prefixSumMap.find(key) != prefixSumMap.end()){
+		  longestLen = max(longestLen, i - prefixSumMap[key]);
+	  }
+	  if(prefixSumMap.find(sum) == prefixSumMap.end()){ // this will make it work for zeroes in the array too 
+		  prefixSumMap[sum] = i;
+	  }
+   }
+   return longestLen;
+}
+```
 
-
+  
