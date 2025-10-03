@@ -594,4 +594,27 @@ int longestSubarray(vector<int>& arr, int k) {
 }
 ```
 
- 
+ - The better approach involves using hashing ( hash-map ) and using prefix sum concept.
+```cpp 
+int longestSubarray(vector<int>& arr, int k) {
+   int n = arr.size();
+   int longestLen = 0;
+   unordered_map<int, int> prefixSumMap;
+   int sum = 0;
+   for(int i = 0;i<n;i++){
+	  sum += arr[i];
+	  if(sum == k ) longestLen = max(longestLen, i+1);
+	  int key = sum - k;
+	  if(prefixSumMap.find(key) != prefixSumMap.end()){
+		  longestLen = max(longestLen, i - prefixSumMap[key]);
+	  }
+	  prefixSumMap[sum] = i;
+   }
+   return longestLen;
+}
+// this code does not work for array having zeroes
+```
+
+- For the above code to work for array having zeroes, the map should not be updated for values of sum already in the map.
+
+
