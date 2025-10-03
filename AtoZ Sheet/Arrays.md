@@ -533,4 +533,14 @@ int singleNumber(vector<int>& nums) {
 }
 ```
 
-### 10. 
+### 10. Longest Subarray with sum K (only positives)
+
+```embed
+title: "Longest Subarray with sum K | Brute - Better - Optimal | Generate Subarrays"
+image: "https://i.ytimg.com/vi/frf7qxiN2qU/maxresdefault.jpg"
+description: "Check out TUF+:https://takeuforward.org/plus?source=youtubeFind DSA, LLD, OOPs, Core Subjects, 1000+ Premium Questions company wise, Aptitude, SQL, AI doubt ..."
+url: "https://youtu.be/frf7qxiN2qU?t=55"
+favicon: ""
+aspectRatio: "56.25"
+```
+
