@@ -662,5 +662,49 @@ int longestSubarray(vector<int>& arr, int k) {
 
 ## Medium 
 
+### 1. 2 Sum 
 
-   
+```embed
+title: "2 Sum Problem | 2 types of the same problem for Interviews | Brute-Better-Optimal"
+image: "https://i.ytimg.com/vi/UXDSeD9mN-k/maxresdefault.jpg"
+description: "Check out TUF+:https://takeuforward.org/plus?source=youtubeFind DSA, LLD, OOPs, Core Subjects, 1000+ Premium Questions company wise, Aptitude, SQL, AI doubt ..."
+url: "https://www.youtube.com/watch?v=UXDSeD9mN-k"
+favicon: ""
+aspectRatio: "56.25"
+```
+
+- For brute force just use the nested for loops
+```cpp 
+vector<int> twoSum(vector<int>& nums, int target) {
+	int n = nums.size();
+	for(int i = 0;i<n;i++){
+		for(int j = 0;j<n;j++){ // this for loop can be optimized 
+			if (i==j) continue;
+			if(nums[i] + nums[j] == target)
+			return {i,j};
+		}
+	}
+	return {-1,-1};
+}
+```
+
+- For slightly better brute force, `for the j for loop iterate from i+1 instead of 0`.
+
+```cpp 
+vector<int> twoSum(vector<int>& nums, int target) {
+	int n = nums.size();
+	for(int i = 0;i<n;i++){
+		for(int j = i+1;j<n;j++){
+			if(nums[i] + nums[j] == target)
+			return {i,j};
+		}
+	}
+	return {-1,-1};
+}
+```
+
+- The optimal approach involves using `hashmap with key : element and value : index `
+
+```cpp 
+
+```
