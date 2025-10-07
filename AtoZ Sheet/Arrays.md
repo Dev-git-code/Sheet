@@ -831,5 +831,33 @@ int majorityElement(vector<int>& nums) {
 - Best approach : use Moore's Voting algo to get the possible majority element and then verify that it is majority element by iterating the array.
 
 ```cpp 
+int majorityElement(vector<int>& nums) {
+	int n = nums.size();
+	int count = 0;
+	int element = nums[0];
+	for(int i = 0;i<n;i++){
+	  if(count == 0){
+		element = nums[i];
+		count = 1;
+	  }
+	  else if(nums[i] == element){
+		count++;
+	  }else{
+		count--;
+	  }
+	}
 
+	int majCount = 0;
+	for(int i = 0;i<n;i++){
+		if(element == nums[i]){
+			majCount++;
+		}
+	}
+
+	if(majCount > n/2){
+		return element;
+	}
+	
+	return -1;
+}
 ```
