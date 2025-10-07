@@ -756,6 +756,7 @@ aspectRatio: "52"
 
 ```cpp 
 void sortColors(vector<int>& nums) {
+	// Dutch National Flag algorithm 
 	int low = 0, mid = 0, high = nums.size()-1;
 
 	while(mid<=high){
@@ -809,7 +810,7 @@ int majorityElement(vector<int>& nums) {
 }
 ```
 
-- Better approach : use hashmap to store the count and then iterate the hashmap to the count of the majority element.
+- Better approach : use hash map to store the count and then iterate the hash map to the count of the majority element.
 
 ```cpp 
 int majorityElement(vector<int>& nums) {
@@ -835,6 +836,8 @@ int majorityElement(vector<int>& nums) {
 	int n = nums.size();
 	int count = 0;
 	int element = nums[0];
+	
+	// moore's voting algo 
 	for(int i = 0;i<n;i++){
 	  if(count == 0){
 		element = nums[i];
@@ -847,6 +850,7 @@ int majorityElement(vector<int>& nums) {
 	  }
 	}
 
+	// verify the majority element
 	int majCount = 0;
 	for(int i = 0;i<n;i++){
 		if(element == nums[i]){
@@ -861,3 +865,5 @@ int majorityElement(vector<int>& nums) {
 	return -1;
 }
 ```
+
+### 4. 
