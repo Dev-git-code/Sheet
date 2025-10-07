@@ -773,3 +773,63 @@ void sortColors(vector<int>& nums) {
 }
 ```
 
+### 3. Majority Element (>n/2 times)
+
+```embed
+title: "Majority Element I | Brute-Better-Optimal | Moore's Voting Algorithm | Intuition 🔥|Brute to Optimal"
+image: "https://i.ytimg.com/vi/nP_ns3uSh80/maxresdefault.jpg"
+description: "Check out TUF+:https://takeuforward.org/plus?source=youtubeFind DSA, LLD, OOPs, Core Subjects, 1000+ Premium Questions company wise, Aptitude, SQL, AI doubt ..."
+url: "https://youtu.be/nP_ns3uSh80?t=40"
+favicon: ""
+aspectRatio: "56.25"
+```
+
+```embed
+title: "Majority Element - LeetCode"
+image: "https://leetcode.com/static/images/LeetCode_Sharing.png"
+description: "Can you solve this real interview question? Majority Element - Given an array nums of size n, return the majority element.  The majority element is the element that appears more than ⌊n / 2⌋ times. You may assume that the majority element always exists in the array.     Example 1:  Input: nums = [3,2,3] Output: 3   Example 2:  Input: nums = [2,2,1,1,1,2,2] Output: 2      Constraints:   * n == nums.length  * 1 <= n <= 5 * 104  * -109 <= nums[i] <= 109     Follow-up: Could you solve the problem in linear time and in O(1) space?"
+url: "https://leetcode.com/problems/majority-element/description"
+favicon: ""
+aspectRatio: "52"
+```
+
+- Brute force : iterate using nested loop getting count of each element and comparing the count to check if it is majority element.
+```cpp 
+int majorityElement(vector<int>& nums) {
+	int n = nums.size();
+	for(int i = 0;i<n;i++){
+		int count = 0;
+		for(int j = 0;j<n;j++){
+			if(nums[i] == nums[j]) count++;
+		}
+		if(count > n/2) return nums[i];
+	}
+
+	return -1;
+}
+```
+
+- Better approach : use hashmap to store the count and then iterate the hashmap to the count of the majority element.
+
+```cpp 
+int majorityElement(vector<int>& nums) {
+	int n = nums.size();
+	unordered_map<int,int> countMap;
+	for(int i = 0;i<n;i++){
+	   countMap[nums[i]]++;
+	}
+	for(auto it: countMap){
+		if(it.second > n/2){
+			return it.first;
+		}
+	}
+
+	return -1;
+}
+```
+
+- Best approach : use Moore's Voting algo to get the possible majority element and then verify that it is majority element by iterating the array.
+
+```cpp 
+
+```
