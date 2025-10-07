@@ -895,6 +895,7 @@ int maxSubArray(vector<int>& nums) {
 	int n = nums.size();
 	int maxSum = INT_MIN;
 	int sum = 0;
+	//kadane's algorithm
 	for(int i = 0;i<n;i++){
 		if(sum < 0) sum = 0;
 		sum += nums[i];
@@ -904,13 +905,34 @@ int maxSubArray(vector<int>& nums) {
 }
 ```
 
-```embed
-title: "Maximum Sub Array | Practice | GeeksforGeeks "
-image: "https://media.geeksforgeeks.org/wp-content/cdn-uploads/gfg_200x200-min.png"
-description: "Given an array of integers arr[], find the contiguous subarray with the maximum sum that contains only non-negative numbers. If multiple subarrays have the same sum, return the one with the smallest starting index. If the array contains only negative"
-url: "https://www.geeksforgeeks.org/problems/maximum-sub-array5443/1"
-favicon: ""
-aspectRatio: "100"
-```
-
 - Modified problem where the subarray also need to be returned.
+
+```cpp 
+vector<int> findSubarray(vector<int>& arr) {
+	// code here
+	int n = arr.size();
+	int sum = 0;
+	int maxSum = INT_MIN;
+	int maxStart = -1;
+	int maxEnd = -1;
+	int start = 0;
+	
+	for(int i = 0;i<n;i++){
+		if(sum < 0) sum = 0;
+		if(sum == 0) start = i;
+		
+		sum += arr[i];
+		
+		if(sum > maxSum){
+			maxSum = sum;
+			maxStart = start;
+			maxEnd = i;
+		}
+		
+	}
+	
+	if(maxStart != -1 && maxEnd != -1){
+		return vector<int>(arr.begin()+maxStart, arr.begin()+maxEnd+1);
+	}
+}
+```
