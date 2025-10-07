@@ -903,3 +903,14 @@ int maxSubArray(vector<int>& nums) {
 	return maxSum;
 }
 ```
+
+```embed
+title: "Maximum Sub Array | Practice | GeeksforGeeks "
+image: "https://media.geeksforgeeks.org/wp-content/cdn-uploads/gfg_200x200-min.png"
+description: "Given an array of integers arr[], find the contiguous subarray with the maximum sum that contains only non-negative numbers. If multiple subarrays have the same sum, return the one with the smallest starting index. If the array contains only negative"
+url: "https://www.geeksforgeeks.org/problems/maximum-sub-array5443/1"
+favicon: ""
+aspectRatio: "100"
+```
+
+- Modified problem where the subarray also need to be returned.
