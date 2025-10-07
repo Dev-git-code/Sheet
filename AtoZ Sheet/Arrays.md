@@ -897,9 +897,9 @@ int maxSubArray(vector<int>& nums) {
 	int sum = 0;
 	//kadane's algorithm
 	for(int i = 0;i<n;i++){
-		if(sum < 0) sum = 0;
 		sum += nums[i];
 		maxSum = max(maxSum, sum);
+		if(sum < 0) sum = 0;
 	}
 	return maxSum;
 }
@@ -918,7 +918,7 @@ vector<int> findSubarray(vector<int>& arr) {
 	int start = 0;
 	
 	for(int i = 0;i<n;i++){
-		if(sum < 0) sum = 0;
+		
 		if(sum == 0) start = i;
 		
 		sum += arr[i];
@@ -928,6 +928,8 @@ vector<int> findSubarray(vector<int>& arr) {
 			maxStart = start;
 			maxEnd = i;
 		}
+		
+		if(sum < 0) sum = 0;
 		
 	}
 	
