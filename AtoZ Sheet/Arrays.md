@@ -730,3 +730,46 @@ vector<int> twoSum(vector<int>& nums, int target) {
 }
 ```
 
+### 2. Sort an array of 0's 1's and 2's
+
+```embed
+title: "Sort an array of 0's 1's & 2's | Intuition of Algo🔥 | C++ Java Python | Brute-Better-Optimal"
+image: "https://i.ytimg.com/vi/tp8JIuCXBaU/maxresdefault.jpg"
+description: "Check out TUF+:https://takeuforward.org/plus?source=youtubeFind DSA, LLD, OOPs, Core Subjects, 1000+ Premium Questions company wise, Aptitude, SQL, AI doubt ..."
+url: "https://youtu.be/tp8JIuCXBaU?t=40"
+favicon: ""
+aspectRatio: "56.25"
+```
+
+```embed
+title: "Sort Colors - LeetCode"
+image: "https://leetcode.com/static/images/LeetCode_Sharing.png"
+description: "Can you solve this real interview question? Sort Colors - Given an array nums with n objects colored red, white, or blue, sort them in-place [https://en.wikipedia.org/wiki/In-place_algorithm] so that objects of the same color are adjacent, with the colors in the order red, white, and blue.  We will use the integers 0, 1, and 2 to represent the color red, white, and blue, respectively.  You must solve this problem without using the library's sort function.     Example 1:   Input: nums = [2,0,2,1,1,0] Output: [0,0,1,1,2,2]   Example 2:   Input: nums = [2,0,1] Output: [0,1,2]      Constraints:   * n == nums.length  * 1 <= n <= 300  * nums[i] is either 0, 1, or 2.     Follow up: Could you come up with a one-pass algorithm using only constant extra space?"
+url: "https://leetcode.com/problems/sort-colors"
+favicon: ""
+aspectRatio: "52"
+```
+
+- Brute force: directly sort the array.
+- Better approach: iterate the array, count the 0s 1s and 2s and then fill them back back into the array according to the count starting from 0 going till 2.
+- The best solution uses Dutch National Flag Algorithm to sort the array.
+
+```cpp 
+void sortColors(vector<int>& nums) {
+	int low = 0, mid = 0, high = nums.size()-1;
+
+	while(mid<=high){
+		if(nums[mid] == 0){
+			swap(nums[mid], nums[low]);
+			mid++;
+			low++;
+		}else if(nums[mid] == 1){
+			mid++;
+		}else if(nums[mid] == 2){
+			swap(nums[mid], nums[high]);
+			high--;
+		}
+	}
+}
+```
+
