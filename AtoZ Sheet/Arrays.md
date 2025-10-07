@@ -866,4 +866,40 @@ int majorityElement(vector<int>& nums) {
 }
 ```
 
-### 4. 
+### 4. Kadane's Algorithm, maximum subarray sum
+
+```embed
+title: "Kadane's Algorithm | Maximum Subarray Sum | Finding and Printing"
+image: "https://i.ytimg.com/vi/AHZpyENo7k4/maxresdefault.jpg"
+description: "Check out TUF+:https://takeuforward.org/plus?source=youtubeFind DSA, LLD, OOPs, Core Subjects, 1000+ Premium Questions company wise, Aptitude, SQL, AI doubt ..."
+url: "https://youtu.be/AHZpyENo7k4?t=136"
+favicon: ""
+aspectRatio: "56.25"
+```
+
+```embed
+title: "Maximum Subarray - LeetCode"
+image: "https://leetcode.com/static/images/LeetCode_Sharing.png"
+description: "Can you solve this real interview question? Maximum Subarray - Given an integer array nums, find the subarray with the largest sum, and return its sum.     Example 1:   Input: nums = [-2,1,-3,4,-1,2,1,-5,4] Output: 6 Explanation: The subarray [4,-1,2,1] has the largest sum 6.   Example 2:   Input: nums = [1] Output: 1 Explanation: The subarray [1] has the largest sum 1.   Example 3:   Input: nums = [5,4,-1,7,8] Output: 23 Explanation: The subarray [5,4,-1,7,8] has the largest sum 23.      Constraints:   * 1 <= nums.length <= 105  * -104 <= nums[i] <= 104     Follow up: If you have figured out the O(n) solution, try coding another solution using the divide and conquer approach, which is more subtle."
+url: "https://leetcode.com/problems/maximum-subarray"
+favicon: ""
+aspectRatio: "52"
+```
+
+- The brute force involves using 3 nested loops to get the sum of each subarray.
+- The better approach involves just using the last j element to add to the sum therefore just using nested for loop
+- The optimal approach involves the kadane's algorithm.
+
+```cpp 
+int maxSubArray(vector<int>& nums) {
+	int n = nums.size();
+	int maxSum = INT_MIN;
+	int sum = 0;
+	for(int i = 0;i<n;i++){
+		if(sum < 0) sum = 0;
+		sum += nums[i];
+		maxSum = max(maxSum, sum);
+	}
+	return maxSum;
+}
+```
