@@ -2,6 +2,9 @@
 
 - Image converter 
 - Link Embed 
+- Automatic table of contents
+- git with 10 minute auto commit and sync 
+- Theme : Atom 
 
 ### Leetcode company wise questions 
 
