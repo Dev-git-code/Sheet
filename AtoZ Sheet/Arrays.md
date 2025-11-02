@@ -888,7 +888,7 @@ aspectRatio: "52"
 
 - The brute force involves using 3 nested loops to get the sum of each subarray.
 - The better approach involves just using the last j element to add to the sum therefore just using nested for loop
-- The optimal approach involves the kadane's algorithm.
+- The optimal approach involves the Kadane's algorithm.
 
 ```cpp 
 int maxSubArray(vector<int>& nums) {
