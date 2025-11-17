@@ -1039,3 +1039,36 @@ favicon: ""
 aspectRatio: "56.25"
 ```
 
+```embed
+title: "Array Leaders | Practice | GeeksforGeeks "
+image: "https://media.geeksforgeeks.org/wp-content/cdn-uploads/gfg_200x200-min.png"
+description: "You are given an array arr of positive integers. Your task is to find all the leaders in the array. An element is considered a leader if it is greater than or equal to all elements to its right. The rightmost element is always a leader. Examples: Inp"
+url: "https://www.geeksforgeeks.org/problems/leaders-in-an-array-1587115620/1"
+favicon: ""
+aspectRatio: "100"
+```
+
+```cpp 
+//Brute Force
+vector<int> leaders(vector<int>& arr) {
+	// Code here
+	vector<int> ans;
+	int n = arr.size();
+	for(int i = 0;i<n;i++){
+		bool isLeader = true;
+		for(int j = i+1;j<n;j++){
+			if(arr[j] > arr[i]){
+				isLeader = false;
+				break;
+			}
+		}
+		if(isLeader == true) ans.push_back(arr[i]);
+	}
+	
+	return ans;
+}
+```
+
+```cpp 
+
+```
