@@ -1028,3 +1028,14 @@ void nextPermutation(vector<int>& nums) {
 }
 ```
 
+## Next Leader 
+
+```embed
+title: "Leaders in an Array | Brute - Optimal | Strivers A2Z DSA Course"
+image: "https://i.ytimg.com/vi/cHrH9CQ8pmY/maxresdefault.jpg"
+description: "Check out TUF+:https://takeuforward.org/plus?source=youtubeFind DSA, LLD, OOPs, Core Subjects, 1000+ Premium Questions company wise, Aptitude, SQL, AI doubt ..."
+url: "https://www.youtube.com/watch?v=cHrH9CQ8pmY"
+favicon: ""
+aspectRatio: "56.25"
+```
+
