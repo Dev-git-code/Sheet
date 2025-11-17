@@ -1028,7 +1028,7 @@ void nextPermutation(vector<int>& nums) {
 }
 ```
 
-## Next Leader 
+### 7. Next Leader 
 
 ```embed
 title: "Leaders in an Array | Brute - Optimal | Strivers A2Z DSA Course"
@@ -1070,5 +1070,18 @@ vector<int> leaders(vector<int>& arr) {
 ```
 
 ```cpp 
-
+//optimal solution
+vector<int> leaders(vector<int>& arr) {
+        vector<int> ans;
+        int n = arr.size();
+        int maxi = INT_MIN;
+        for(int i = n-1;i>=0;i--){
+            if(arr[i]>=maxi){ // handle if there are duplicate elements
+                ans.push_back(arr[i]);
+                maxi = arr[i];
+            }
+        }
+        reverse(ans.begin(), ans.end()); // reverse due to the format and answer acceptance of the question on GFG.
+        return ans;
+    }
 ```
