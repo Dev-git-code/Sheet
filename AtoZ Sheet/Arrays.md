@@ -1134,5 +1134,23 @@ int longestConsecutive(vector<int>& arr) {
 ```
 
 ```cpp 
-
+int longestConsecutive(vector<int>& arr) {
+	sort(arr.begin(),arr.end());
+	int n = arr.size();
+	int lastSmall = INT_MIN;
+	int longest = 1;
+	int currCnt = 1;
+	for(int i = 0;i<n;i++){
+		if(arr[i] == lastSmall + 1){
+			currCnt++;
+			lastSmall = arr[i];
+		}else if(arr[i] != lastSmall){ // In case of else condition duplicates are not handled
+			currCnt = 1;
+			lastSmall = arr[i];
+		}
+		longest = max(currCnt, longest);
+	}
+	return longest;
+}
 ```
+
