@@ -1182,4 +1182,26 @@ int longestConsecutive(vector<int>& arr) {
 }
 ```
 
-### 9. 
+### 9. Set Matrix Zeros
+
+```embed
+title: "Set Matrix Zeroes | O(1) Space Approach | Brute - Better - Optimal"
+image: "https://i.ytimg.com/vi/N0MgLvceX7M/maxresdefault.jpg"
+description: "Check out TUF+:https://takeuforward.org/plus?source=youtubeFind DSA, LLD, OOPs, Core Subjects, 1000+ Premium Questions company wise, Aptitude, SQL, AI doubt ..."
+url: "https://www.youtube.com/watch?v=N0MgLvceX7M"
+favicon: ""
+aspectRatio: "56.25"
+```
+
+```embed
+title: "Set Matrix Zeroes - LeetCode"
+image: "https://leetcode.com/static/images/LeetCode_Sharing.png"
+description: "Can you solve this real interview question? Set Matrix Zeroes - Given an m x n integer matrix matrix, if an element is 0, set its entire row and column to 0's.  You must do it in place [https://en.wikipedia.org/wiki/In-place_algorithm].     Example 1:  [https://assets.leetcode.com/uploads/2020/08/17/mat1.jpg]   Input: matrix = [[1,1,1],[1,0,1],[1,1,1]] Output: [[1,0,1],[0,0,0],[1,0,1]]   Example 2:  [https://assets.leetcode.com/uploads/2020/08/17/mat2.jpg]   Input: matrix = [[0,1,2,0],[3,4,5,2],[1,3,1,5]] Output: [[0,0,0,0],[0,4,5,0],[0,3,1,0]]      Constraints:   * m == matrix.length  * n == matrix[0].length  * 1 <= m, n <= 200  * -231 <= matrix[i][j] <= 231 - 1     Follow up:   * A straightforward solution using O(mn) space is probably a bad idea.  * A simple improvement uses O(m + n) space, but still not the best solution.  * Could you devise a constant space solution?"
+url: "https://leetcode.com/problems/set-matrix-zeroes/description/"
+favicon: ""
+aspectRatio: "52"
+```
+
+```cpp 
+// brute force 
+```
