@@ -167,7 +167,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 284.5
+    "width": 284.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -181,7 +182,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "67cf0b5dcfb0f33c",
+  "active": "f3d8f51972f12855",
   "lastOpenFiles": [
     "AtoZ Sheet/1Index.md",
     "AtoZ Sheet/Arrays.md",
