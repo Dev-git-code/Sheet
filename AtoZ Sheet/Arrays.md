@@ -1204,4 +1204,46 @@ aspectRatio: "52"
 
 ```cpp 
 // brute force 
+
+void markRows(int i, int n, vector<vector<int>>& matrix){
+	for(int j = 0;j<n;j++){
+		if(matrix[i][j] != 0){
+			matrix[i][j] = -1;
+		}
+	}
+}
+
+void markCols(int j, int m, vector<vector<int>>& matrix){
+	for(int i = 0;i<m;i++){
+		if(matrix[i][j] != 0){
+			matrix[i][j] = -1;
+		}
+	}
+}
+
+void setZeroes(vector<vector<int>>& matrix) {
+	int m = matrix.size();
+	int n = matrix[0].size();
+
+	for(int i = 0;i<m;i++){
+		for(int j = 0;j<n;j++){
+			if(matrix[i][j]==0){
+				markRows(i,n,matrix);
+				markCols(j,m,matrix);
+			}
+		}
+	}
+
+	for(int i = 0;i<m;i++){
+		for(int j = 0;j<n;j++){
+			if(matrix[i][j] == -1){
+				matrix[i][j] = 0;
+			}
+		}
+	}
+
+}
+```
+
+```better approac
 ```
