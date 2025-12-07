@@ -1396,7 +1396,25 @@ vector<int> spiralOrder(vector<vector<int>>& matrix) {
 }
 ```
 
-### 12. 
+### 12. Count subarrays with given sum
+
+```embed
+title: "Count Subarray sum Equals K | Brute - Better -Optimal"
+image: "https://i.ytimg.com/vi/xvNwoz-ufXA/maxresdefault.jpg"
+description: "Check out TUF+:https://takeuforward.org/plus?source=youtubeFind DSA, LLD, OOPs, Core Subjects, 1000+ Premium Questions company wise, Aptitude, SQL, AI doubt ..."
+url: "https://www.youtube.com/watch?v=xvNwoz-ufXA"
+favicon: ""
+aspectRatio: "56.25"
+```
+
+```embed
+title: "Subarray Sum Equals K - LeetCode"
+image: "https://leetcode.com/static/images/LeetCode_Sharing.png"
+description: "Can you solve this real interview question? Subarray Sum Equals K - Given an array of integers nums and an integer k, return the total number of subarrays whose sum equals to k.  A subarray is a contiguous non-empty sequence of elements within an array.     Example 1:  Input: nums = [1,1,1], k = 2 Output: 2   Example 2:  Input: nums = [1,2,3], k = 3 Output: 2      Constraints:   * 1 <= nums.length <= 2 * 104  * -1000 <= nums[i] <= 1000  * -107 <= k <= 107"
+url: "https://leetcode.com/problems/subarray-sum-equals-k/description/"
+favicon: ""
+aspectRatio: "52"
+```
 
 ```cpp 
 // brute force
