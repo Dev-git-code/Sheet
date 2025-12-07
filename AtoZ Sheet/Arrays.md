@@ -1203,7 +1203,7 @@ aspectRatio: "52"
 ```
 
 ```cpp 
-// brute force 
+// brute force // this approach only works for the video solution where we have only 0's and 1's in the matrix and no negative elements
 
 void markRows(int i, int n, vector<vector<int>>& matrix){
 	for(int j = 0;j<n;j++){
@@ -1247,9 +1247,31 @@ void setZeroes(vector<vector<int>>& matrix) {
 
 ```cpp 
 // better approach
+void setZeroes(vector<vector<int>>& matrix) {
+	int m = matrix.size();
+	int n = matrix[0].size();
 
+	vector<int> rows(m,0);
+	vector<int> cols(n,0);
 
+	for(int i = 0;i<m;i++){
+		for(int j = 0;j<n;j++){
+			if(matrix[i][j] == 0){
+				rows[i] = 1;
+				cols[j] = 1;
+			}
+		}
+	}
 
+	for(int i = 0;i<m;i++){
+		for(int j = 0;j<n;j++){
+			if(rows[i] == 1 || cols[j] == 1){
+				matrix[i][j] = 0;
+			}
+		}
+	}
+}
 ```
 
-- skipping optimal solution for now.
+- Skipping optimal solution for now. Too many things to consider, will do later.
+
