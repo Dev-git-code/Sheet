@@ -1245,5 +1245,11 @@ void setZeroes(vector<vector<int>>& matrix) {
 }
 ```
 
-```better approac
+```cpp 
+// better approach
+
+
+
 ```
+
+- skipping optimal solution for now.
