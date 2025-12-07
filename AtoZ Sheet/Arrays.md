@@ -1334,4 +1334,14 @@ void rotate(vector<vector<int>>& matrix) {
 }
 ```
 
-### 11. 
+### 11. Print the matrix in spiral manner
+
+```embed
+title: "Spiral Traversal of a Matrix | Spiral Matrix"
+image: "https://i.ytimg.com/vi/3Zv-s9UUrFM/maxresdefault.jpg"
+description: "Check out TUF+:https://takeuforward.org/plus?source=youtubeFind DSA, LLD, OOPs, Core Subjects, 1000+ Premium Questions company wise, Aptitude, SQL, AI doubt ..."
+url: "https://www.youtube.com/watch?v=3Zv-s9UUrFM"
+favicon: ""
+aspectRatio: "56.25"
+```
+
