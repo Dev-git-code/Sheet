@@ -1315,3 +1315,23 @@ void rotate(vector<vector<int>>& matrix) {
 }
 ```
 
+```cpp 
+void rotate(vector<vector<int>>& matrix) {
+	int n = matrix.size();
+
+	// matrix transpose
+	for(int i = 0;i<n;i++){
+		for(int j = i+1;j<n;j++){
+			swap(matrix[i][j], matrix[j][i]);
+		}
+	}
+
+	// reverse the rows
+	for(int i = 0;i<n;i++){
+		reverse(matrix[i].begin(), matrix[i].end());
+	}
+	
+}
+```
+
+### 11. 
