@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "System Design/System Design Basics.md",
+                "file": "AtoZ Sheet/Arrays.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "System Design Basics"
+              "title": "Arrays"
             }
           }
         ]
@@ -144,13 +144,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "System Design/System Design Basics.md",
+                "file": "AtoZ Sheet/Arrays.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of System Design Basics"
+              "title": "Outline of Arrays"
             }
           },
           {
@@ -184,10 +184,10 @@
   },
   "active": "f3d8f51972f12855",
   "lastOpenFiles": [
-    "AtoZ Sheet/Arrays.md",
-    "System Design/System Design Basics.md",
-    "System Design",
     "AtoZ Sheet/1Index.md",
+    "System Design/System Design Basics.md",
+    "AtoZ Sheet/Arrays.md",
+    "System Design",
     "AtoZ Sheet/Strings.md",
     "Recursion and DP notes/Aditya Verma Recursion Playlist.md",
     "Recursion and DP notes/Abdul Bari DP.md",
