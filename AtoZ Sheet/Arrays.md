@@ -1485,4 +1485,7 @@ int findElementInPascalTriangle(int m, int n){
 }
 ```
 
-- Type 2 : 
+- Type 2 : Get the row 
+```cpp 
+
+```
