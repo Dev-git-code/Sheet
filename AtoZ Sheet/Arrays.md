@@ -796,7 +796,7 @@ favicon: ""
 aspectRatio: "52"
 ```
 
-- Brute force : iterate using nested loop getting count of each element and comparing the count to check if it is majority element.
+- Brute force : Iterate using nested loop getting count of each element and comparing the count to check if it is majority element.
 ```cpp 
 int majorityElement(vector<int>& nums) {
 	int n = nums.size();
@@ -812,7 +812,7 @@ int majorityElement(vector<int>& nums) {
 }
 ```
 
-- Better approach : use hash map to store the count and then iterate the hash map to the count of the majority element.
+- Better approach : Use hash map to store the count and then iterate the hash map to the count of the majority element.
 
 ```cpp 
 int majorityElement(vector<int>& nums) {
