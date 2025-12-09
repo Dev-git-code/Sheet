@@ -1484,3 +1484,5 @@ int findElementInPascalTriangle(int m, int n){
 	return findNcR(m-1,n-1);
 }
 ```
+
+- Type 2 : 
