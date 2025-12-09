@@ -1457,3 +1457,15 @@ int subarraySum(vector<int>& nums, int k) {
 }
 ```
 
+## Hard 
+
+### 1. Pascal's Triangle
+
+```embed
+title: "Pascal Triangle | Finding nCr in minimal time"
+image: "https://i.ytimg.com/vi/bR7mQgwQ_o8/maxresdefault.jpg"
+description: "Check out TUF+:https://takeuforward.org/plus?source=youtubeFind DSA, LLD, OOPs, Core Subjects, 1000+ Premium Questions company wise, Aptitude, SQL, AI doubt ..."
+url: "https://www.youtube.com/watch?v=bR7mQgwQ_o8"
+favicon: ""
+aspectRatio: "56.25"
+```
