@@ -1544,4 +1544,46 @@ vector<vector<int>> generate(int numRows) {
 }
 ```
 
-	
+### 2. Majority element (n/3)
+
+```embed
+title: "Majority Element II | Brute-Better-Optimal"
+image: "https://i.ytimg.com/vi/vwZj1K0e9U8/maxresdefault.jpg"
+description: "Check out TUF+: https://takeuforward.org/plus?source=youtubeFind DSA, LLD, OOPs, Core Subjects, 1000+ Premium Questions company wise, Aptitude, SQL, AI doubt..."
+url: "https://www.youtube.com/watch?v=vwZj1K0e9U8"
+favicon: ""
+aspectRatio: "56.25"
+```
+
+```embed
+title: "Majority Element II - LeetCode"
+image: "https://leetcode.com/static/images/LeetCode_Sharing.png"
+description: "Can you solve this real interview question? Majority Element II - Given an integer array of size n, find all elements that appear more than ⌊ n/3 ⌋ times.     Example 1:   Input: nums = [3,2,3] Output: [3]   Example 2:   Input: nums = [1] Output: [1]   Example 3:   Input: nums = [1,2] Output: [1,2]      Constraints:   * 1 <= nums.length <= 5 * 104  * -109 <= nums[i] <= 109     Follow up: Could you solve the problem in linear time and in O(1) space?"
+url: "https://leetcode.com/problems/majority-element-ii/"
+favicon: ""
+aspectRatio: "52"
+```
+
+```cpp 
+// Better approach 
+vector<int> majorityElement(vector<int>& nums) {
+  int n = nums.size();
+  unordered_map<int,int> cntMap;
+  vector<int> ans;
+  int majCnt = int(n/3) + 1;
+  for(int i = 0;i<n;i++){
+	cntMap[nums[i]]++;
+	if(cntMap[nums[i]] >= majCnt){
+		if(find(ans.begin(), ans.end(), nums[i]) == ans.end()){
+			ans.push_back(nums[i]);
+		}
+	}
+	if(ans.size() == 2) break;
+  }    
+  return ans;
+}
+```
+
+```cpp 
+//optimal
+```
