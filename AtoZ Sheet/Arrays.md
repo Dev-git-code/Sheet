@@ -1469,3 +1469,18 @@ url: "https://www.youtube.com/watch?v=bR7mQgwQ_o8"
 favicon: ""
 aspectRatio: "56.25"
 ```
+
+- Type 1 is find the element at `mth row and nth column `in pascals triangle.
+```cpp 
+int findNcR(int n, int r){
+	int res = 1;
+	for(int i = 0;i<r;i++){
+		res = res * (n-i);
+		res = res / (i+1);
+	}
+	return res;
+}
+int findElementInPascalTriangle(int m, int n){
+	return findNcR(m-1,n-1);
+}
+```
