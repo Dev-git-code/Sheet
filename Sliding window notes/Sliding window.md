@@ -105,4 +105,71 @@ vector<int> firstNegInt(vector<int>& arr, int k) {
 }
 ```
 
-### 3. 
+### 3. Count Occurrences Of Anagrams
+
+```embed
+title: "Count Occurrences Of Anagrams | Sliding Window"
+image: "https://i.ytimg.com/vi/MW4lJ8Y0xXk/maxresdefault.jpg"
+description: "Patreon Link: https://www.patreon.com/adityaVermaVideo Pdf Notes And Code: https://www.patreon.com/posts/43529429Playlist Link: https://www.youtube.com/playl..."
+url: "https://www.youtube.com/watch?v=MW4lJ8Y0xXk"
+favicon: ""
+aspectRatio: "56.25"
+```
+
+```embed
+title: "Count Occurences of Anagrams | Practice | GeeksforGeeks "
+image: "https://media.geeksforgeeks.org/wp-content/cdn-uploads/gfg_200x200-min.png"
+description: "Given a word pat&nbsp;and a text txt. Return the count of the occurrences of anagrams of the word in the text. Example 1: Input: txt = \"forxxorfxdofr\", pat = \"for\" Output: 3 Explanation: for, orf and ofr appears in the txt, hence answer is 3.  Exampl"
+url: "https://www.geeksforgeeks.org/problems/count-occurences-of-anagrams5839/1"
+favicon: ""
+aspectRatio: "100"
+```
+
+```cpp 
+int search(string &pat, string &txt) {
+	int n = txt.size();
+	int k = pat.size();
+	unordered_map<char, int> freqMap;
+	
+	for(int i = 0;i<k;i++){
+		freqMap[pat[i]]++;
+	}
+	
+	int distinctCnt = freqMap.size();
+	int cnt = 0;
+	
+	int i =0, j=0;
+	
+	while(j<n){
+		
+		if(freqMap.find(txt[j])!=freqMap.end()){
+			freqMap[txt[j]]--;
+			if(freqMap[txt[j]] == 0){
+				distinctCnt --;
+			}
+		}
+		
+		if(j-i+1 < k){
+			j++;
+		}else if(j-i+1 == k){
+		
+			if(distinctCnt == 0){
+				cnt++;
+			}
+			
+			if(freqMap.find(txt[i]) != freqMap.end()){
+				freqMap[txt[i]]++;
+				if(freqMap[txt[i]] == 1){
+					distinctCnt ++;
+				}
+			}
+			
+			i++, j++;
+		}
+	}
+	
+	return cnt;
+}
+```
+
+### 4. 
