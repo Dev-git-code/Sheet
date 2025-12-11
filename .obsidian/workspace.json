@@ -79,8 +79,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 286.5,
-    "collapsed": true
+    "width": 286.5
   },
   "right": {
     "id": "5ffdc532e2084318",
@@ -186,17 +185,20 @@
   "active": "f3d8f51972f12855",
   "lastOpenFiles": [
     "AtoZ Sheet/1Index.md",
+    "AtoZ Sheet/Sliding Window and two pointer.md",
+    "Recursion and DP notes/Aditya Verma Recursion Playlist.md",
+    "Sliding window notes/Sliding window.md",
+    "Sliding window notes",
+    "Setup.md",
+    "Recursion and DP notes/Abdul Bari DP.md",
+    "AtoZ Sheet/Arrays.md",
     "AtoZ Sheet/Bit Manipulation.md",
     "AtoZ Sheet/Binary Trees and Binary Search Trees.md",
     "AtoZ Sheet/Binary Search.md",
     "AtoZ Sheet/Basics.md",
-    "AtoZ Sheet/Arrays.md",
-    "Recursion and DP notes/Aditya Verma Recursion Playlist.md",
     "System Design/System Design Basics.md",
     "System Design",
     "AtoZ Sheet/Strings.md",
-    "Recursion and DP notes/Abdul Bari DP.md",
-    "Setup.md",
     "local_images/Arrays-1760243358660.png",
     "practice/prac.exe",
     "practice/prac.cpp",
@@ -215,8 +217,6 @@
     "copilot-custom-prompts/Emojify.md",
     "copilot-custom-prompts/Explain like I am 5.md",
     "copilot-custom-prompts/Simplify.md",
-    "copilot-custom-prompts/Summarize.md",
-    "copilot-custom-prompts/Translate to Chinese.md",
     "copilot-custom-prompts",
     "Recursion and DP notes/Aditya Verma DP Notes",
     "Topics",
@@ -229,7 +229,6 @@
     "Pasted image 20250609133023.png",
     "Sheet/Sheet/Leetcode Practice/4.2 All Pairs Shortest Path (Floyd-Warshall) - Dynamic Programming 11-23 screenshot 1.png",
     "Sheet/Sheet/Leetcode Practice/4.2 All Pairs Shortest Path (Floyd-Warshall) - Dynamic Programming 6-27 screenshot 1.png",
-    "local_images",
-    "AtoZ Sheet"
+    "local_images"
   ]
 }
