@@ -170,4 +170,52 @@ int search(string &pat, string &txt) {
 	return cnt;
 }
 ```
-### 4. 
+### 4. Maximum of all subarrays of size k
+
+```embed
+title: "Maximum of all subarrays of size k | Sliding Window"
+image: "https://i.ytimg.com/vi/xFJXtB5vSmM/maxresdefault.jpg"
+description: "Patreon Link: https://www.patreon.com/adityaVermaVideo Pdf Notes And Code: https://www.patreon.com/posts/43956990Playlist Link: https://www.youtube.com/playl..."
+url: "https://www.youtube.com/watch?v=xFJXtB5vSmM"
+favicon: ""
+aspectRatio: "56.25"
+```
+
+```embed
+title: "K Sized Subarray Maximum | Practice | GeeksforGeeks "
+image: "https://media.geeksforgeeks.org/wp-content/cdn-uploads/gfg_200x200-min.png"
+description: "Given an array&nbsp;arr[] of positive integers and an integer k. You have to find the maximum value for each contiguous subarray of size k. Return an array of maximum values corresponding to each contiguous subarray. Examples: Input: arr[] = [1, 2, 3"
+url: "https://www.geeksforgeeks.org/problems/maximum-of-all-subarrays-of-size-k3101/1"
+favicon: ""
+aspectRatio: "100"
+```
+
+```cpp 
+vector<int> maxOfSubarrays(vector<int>& arr, int k) {
+	int n = arr.size();
+	vector<int> maxSubarray;
+	deque<int> maxQueue;
+	
+	int i = 0, j=0;
+	
+	while(j<n){
+		
+		while(maxQueue.size() > 0 && maxQueue.back() < arr[j]){
+			maxQueue.pop_back();
+		}
+		maxQueue.push_back(arr[j]);
+		
+		if(j-i+1 < k){
+			j++;
+		}else if(j-i+1 ==k){
+			maxSubarray.push_back(maxQueue.front());
+			if(arr[i] == maxQueue.front()){
+				maxQueue.pop_front();
+			}
+			i++, j++;
+		}
+	}
+	
+	return maxSubarray;
+}
+```
