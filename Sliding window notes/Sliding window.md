@@ -104,7 +104,6 @@ vector<int> firstNegInt(vector<int>& arr, int k) {
 	return res;
 }
 ```
-
 ### 3. Count Occurrences Of Anagrams
 
 ```embed
@@ -171,5 +170,4 @@ int search(string &pat, string &txt) {
 	return cnt;
 }
 ```
-
 ### 4. 
