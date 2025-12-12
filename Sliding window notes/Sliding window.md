@@ -219,3 +219,58 @@ vector<int> maxOfSubarrays(vector<int>& arr, int k) {
 	return maxSubarray;
 }
 ```
+
+### 5. Longest Substring with K Uniques
+
+```embed
+title: "Longest Substring With K Unique Characters | Variable Size Sliding Window"
+image: "https://i.ytimg.com/vi/Lav6St0W_pQ/maxresdefault.jpg"
+description: "Become a Competitive Programming Hero with this structured batch to help all levels of programmers sharpen their skills: http://unacademy.cc/AVBAT[FREE] Begi..."
+url: "https://www.youtube.com/watch?v=Lav6St0W_pQ"
+favicon: ""
+aspectRatio: "56.25"
+```
+
+```embed
+title: "Longest Substring with K Uniques | Practice | GeeksforGeeks "
+image: "https://media.geeksforgeeks.org/wp-content/cdn-uploads/gfg_200x200-min.png"
+description: "You are given a string s consisting only lowercase alphabets and an integer k. Your task is to find the length of the longest substring that contains exactly k distinct characters. Note : If no such substring exists, return -1.&nbsp; Examples: Input:"
+url: "https://www.geeksforgeeks.org/problems/longest-k-unique-characters-substring0853/1"
+favicon: ""
+aspectRatio: "100"
+```
+
+```cpp 
+int longestKSubstr(string &s, int k) {
+   int n = s.size();
+   
+   int i = 0, j= 0;
+   int maxLen = -1;
+   unordered_map<char, int> freqMap;
+   
+   while(j<n){
+	   freqMap[s[j]]++;
+	   
+	   if(freqMap.size() < k){
+		   j++;
+	   }else if(freqMap.size() == k){
+		   maxLen = max(maxLen, j-i+1);
+		   j++;
+	   }else if(freqMap.size() > k){
+		   while(freqMap.size() > k){
+			   freqMap[s[i]]--;
+			   if(freqMap[s[i]] == 0){
+				   freqMap.erase(s[i]);
+			   }
+			   i++;
+		   }
+		   j++;
+	   }
+   }
+   
+   return maxLen;
+
+}
+```
+
+### 6. 

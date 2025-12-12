@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Recursion and DP notes/Abdul Bari DP.md",
+                "file": "Sliding window notes/Sliding window.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Abdul Bari DP"
+              "title": "Sliding window"
             }
           }
         ]
@@ -143,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Recursion and DP notes/Abdul Bari DP.md",
+                "file": "Sliding window notes/Sliding window.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Abdul Bari DP"
+              "title": "Outline of Sliding window"
             }
           },
           {
@@ -184,6 +184,7 @@
   },
   "active": "f3d8f51972f12855",
   "lastOpenFiles": [
+    "Recursion and DP notes/Abdul Bari DP.md",
     "Sliding window notes/Sliding window.md",
     "AtoZ Sheet/Arrays.md",
     "AtoZ Sheet/1Index.md",
@@ -191,7 +192,6 @@
     "Recursion and DP notes/Aditya Verma Recursion Playlist.md",
     "Sliding window notes",
     "Setup.md",
-    "Recursion and DP notes/Abdul Bari DP.md",
     "AtoZ Sheet/Bit Manipulation.md",
     "AtoZ Sheet/Binary Trees and Binary Search Trees.md",
     "AtoZ Sheet/Binary Search.md",
