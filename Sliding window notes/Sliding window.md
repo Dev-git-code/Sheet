@@ -532,3 +532,53 @@ int subarraysWithKDistinct(vector<int>& nums, int k) {
 	return atmostKDistinct(nums, k) - atmostKDistinct(nums, k-1);
 }
 ```
+
+### 10.  Max Consecutive Ones III
+
+```embed
+title: "L4. Max Consecutive Ones III | 2 Pointers and Sliding Window Playlist"
+image: "https://i.ytimg.com/vi/3E4JBHSLpYk/maxresdefault.jpg"
+description: "Check out TUF+:https://takeuforward.org/plus?source=youtubeFind DSA, LLD, OOPs, Core Subjects, 1000+ Premium Questions company wise, Aptitude, SQL, AI doubt ..."
+url: "https://www.youtube.com/watch?v=3E4JBHSLpYk"
+favicon: ""
+aspectRatio: "56.25"
+```
+
+```embed
+title: "Max Consecutive Ones III - LeetCode"
+image: "https://leetcode.com/static/images/LeetCode_Sharing.png"
+description: "Can you solve this real interview question? Max Consecutive Ones III - Given a binary array nums and an integer k, return the maximum number of consecutive 1's in the array if you can flip at most k 0's.     Example 1:   Input: nums = [1,1,1,0,0,0,1,1,1,1,0], k = 2 Output: 6 Explanation: [1,1,1,0,0,1,1,1,1,1,1] Bolded numbers were flipped from 0 to 1. The longest subarray is underlined.  Example 2:   Input: nums = [0,0,1,1,0,0,1,1,1,0,1,1,0,0,0,1,1,1,1], k = 3 Output: 10 Explanation: [0,0,1,1,1,1,1,1,1,1,1,1,0,0,0,1,1,1,1] Bolded numbers were flipped from 0 to 1. The longest subarray is underlined.      Constraints:   * 1 <= nums.length <= 105  * nums[i] is either 0 or 1.  * 0 <= k <= nums.length"
+url: "https://leetcode.com/problems/max-consecutive-ones-iii/"
+favicon: ""
+aspectRatio: "52"
+```
+
+- too much optimal solution not done.
+```cpp 
+int longestOnes(vector<int>& nums, int k) {
+	int n = nums.size();
+	int i = 0, j = 0;
+	int req = 0;
+	int maxLen = 0;
+
+	while(j<n){
+		if(nums[j] == 0){
+			req++;
+		}
+	  
+		while(req > k){
+			if(nums[i] == 0){
+				req--;
+			}
+			i++;
+		}
+
+		maxLen = max(maxLen, j-i+1);
+		j++;
+			
+	}
+	return maxLen;
+}
+```
+
+### 11. 
