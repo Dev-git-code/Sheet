@@ -476,4 +476,59 @@ int numberOfSubstrings(string s) {
 }
 ```
 
-### 9. 
+### 9. Subarray with k different integers
+
+```embed
+title: "L6. Longest Substring With At Most K Distinct Characters | 2 Pointers and Sliding Window Playlist"
+image: "https://i.ytimg.com/vi/teM9ZsVRQyc/maxresdefault.jpg"
+description: "Check out TUF+:https://takeuforward.org/plus?source=youtubeFind DSA, LLD, OOPs, Core Subjects, 1000+ Premium Questions company wise, Aptitude, SQL, AI doubt ..."
+url: "https://www.youtube.com/watch?v=teM9ZsVRQyc"
+favicon: ""
+aspectRatio: "56.25"
+```
+
+```embed
+title: "L11. Subarray with k different integers | 2 Pointers and Sliding Window Playlist"
+image: "https://i.ytimg.com/vi/7wYGbV_LsX4/maxresdefault.jpg"
+description: "Check out TUF+:https://takeuforward.org/plus?source=youtubeFind DSA, LLD, OOPs, Core Subjects, 1000+ Premium Questions company wise, Aptitude, SQL, AI doubt ..."
+url: "https://www.youtube.com/watch?v=7wYGbV_LsX4"
+favicon: ""
+aspectRatio: "56.25"
+```
+
+```embed
+title: "Subarrays with K Different Integers - LeetCode"
+image: "https://leetcode.com/static/images/LeetCode_Sharing.png"
+description: "Can you solve this real interview question? Subarrays with K Different Integers - Given an integer array nums and an integer k, return the number of good subarrays of nums.  A good array is an array where the number of different integers in that array is exactly k.   * For example, [1,2,3,1,2] has 3 different integers: 1, 2, and 3.  A subarray is a contiguous part of an array.     Example 1:   Input: nums = [1,2,1,2,3], k = 2 Output: 7 Explanation: Subarrays formed with exactly 2 different integers: [1,2], [2,1], [1,2], [2,3], [1,2,1], [2,1,2], [1,2,1,2]   Example 2:   Input: nums = [1,2,1,3,4], k = 3 Output: 3 Explanation: Subarrays formed with exactly 3 different integers: [1,2,1,3], [2,1,3], [1,3,4].      Constraints:   * 1 <= nums.length <= 2 * 104  * 1 <= nums[i], k <= nums.length"
+url: "https://leetcode.com/problems/subarrays-with-k-different-integers/description/"
+favicon: ""
+aspectRatio: "52"
+```
+
+```cpp 
+int atmostKDistinct(vector<int> &nums, int k){
+	int n = nums.size();
+
+	int i = 0, j= 0;
+	int cnt = 0;
+	unordered_map<int, int> freqMap;
+	while(j<n){
+		freqMap[nums[j]]++;
+
+		while(freqMap.size() > k){
+			freqMap[nums[i]]--;
+			if(freqMap[nums[i]] == 0){
+				freqMap.erase(nums[i]);
+			}
+			i++;
+		}
+
+		cnt += j-i+1;
+		j++;
+	}
+	return cnt;
+}
+int subarraysWithKDistinct(vector<int>& nums, int k) {
+	return atmostKDistinct(nums, k) - atmostKDistinct(nums, k-1);
+}
+```
