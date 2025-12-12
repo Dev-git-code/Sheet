@@ -323,4 +323,81 @@ int lengthOfLongestSubstring(string s) {
 }
 ```
 
-### 7. 
+### 7. Minimum Window Substring
+
+```embed
+title: "Minimum Window Substring | Variable Size Sliding Window"
+image: "https://i.ytimg.com/vi/iwv1llyN6mo/maxresdefault.jpg"
+description: "Check out the batches here: https://unacademy.com/goal/competitive-programming/LEARNCP/batchesCheck out all the free classes in the current week here: http:/..."
+url: "https://www.youtube.com/watch?v=iwv1llyN6mo"
+favicon: ""
+aspectRatio: "56.25"
+```
+
+```embed
+title: "L12. Minimum Window Substring | 2 Pointers and Sliding Window Playlist"
+image: "https://i.ytimg.com/vi/WJaij9ffOIY/maxresdefault.jpg"
+description: "Check out TUF+:https://takeuforward.org/plus?source=youtubeFind DSA, LLD, OOPs, Core Subjects, 1000+ Premium Questions company wise, Aptitude, SQL, AI doubt ..."
+url: "https://www.youtube.com/watch?v=WJaij9ffOIY"
+favicon: ""
+aspectRatio: "56.25"
+```
+
+```embed
+title: "Minimum Window Substring - LeetCode"
+image: "https://leetcode.com/static/images/LeetCode_Sharing.png"
+description: "Can you solve this real interview question? Minimum Window Substring - Given two strings s and t of lengths m and n respectively, return the minimum window substring of s such that every character in t (including duplicates) is included in the window. If there is no such substring, return the empty string \"\".  The testcases will be generated such that the answer is unique.     Example 1:   Input: s = \"ADOBECODEBANC\", t = \"ABC\" Output: \"BANC\" Explanation: The minimum window substring \"BANC\" includes 'A', 'B', and 'C' from string t.   Example 2:   Input: s = \"a\", t = \"a\" Output: \"a\" Explanation: The entire string s is the minimum window.   Example 3:   Input: s = \"a\", t = \"aa\" Output: \"\" Explanation: Both 'a's from t must be included in the window. Since the largest window of s only has one 'a', return empty string.      Constraints:   * m == s.length  * n == t.length  * 1 <= m, n <= 105  * s and t consist of uppercase and lowercase English letters.     Follow up: Could you find an algorithm that runs in O(m + n) time?"
+url: "https://leetcode.com/problems/minimum-window-substring/"
+favicon: ""
+aspectRatio: "52"
+```
+
+```cpp 
+string minWindow(string s, string t) {
+	int n = s.size();
+
+	unordered_map<char, int> freqMap;
+	for(int i = 0;i<t.size();i++){
+		 freqMap[t[i]]++;
+	}
+	int count = freqMap.size();
+	
+	int minLen = INT_MAX;
+	int bestStart = -1;
+
+	int i = 0, j = 0;
+
+	while(j<n){
+
+		if(freqMap.find(s[j]) != freqMap.end()){
+			freqMap[s[j]]--;
+			if(freqMap[s[j]] == 0){
+				count--;
+			}
+		}
+
+		if(count > 0){
+			j++;
+		}else if(count == 0){
+			while(count == 0 && i<=j){
+
+				if(minLen > j-i+1){
+					minLen = j-i+1;
+					bestStart = i;
+				}
+
+				if(freqMap.find(s[i]) != freqMap.end()){
+					freqMap[s[i]]++;
+					if(freqMap[s[i]] == 1) count++;
+				}
+				i++;
+
+			}
+			j++;
+		}
+	}
+	if(minLen == INT_MAX) return "";
+	return s.substr(bestStart, minLen);
+}
+```
+
