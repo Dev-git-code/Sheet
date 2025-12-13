@@ -713,5 +713,6 @@ int characterReplacement(string s, int k) {
 }
 ```
 
-- In the optimal solution, it says that there is not need to compute the maxFreq again, but I don't really understand why and also in a interview this will be very typical so, so leaving optimal for now.
+- In the optimal solution, it says that there is not need to compute the `maxFreq` again, but I don't really understand why and also in a interview this will be very typical , so leaving optimal for now.
 
+### 13. 
