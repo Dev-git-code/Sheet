@@ -66,28 +66,28 @@ url: "https://leetcode.com/problems/sort-an-array/"
 ```
 
 ```cpp
- void insert(vector<int>& nums, int temp){
-        int n = nums.size();
-        if(nums.size()==0 || nums[n-1]<=temp){
-            nums.push_back(temp);
-            return;
-        }
-        int val = nums[n-1];
-        nums.pop_back();
-        insert(nums,temp);
-        nums.push_back(val);
-    }
-    vector<int> sortArray(vector<int>& nums) {
-        int n = nums.size();
-        if(nums.size()==1){
-            return nums;
-        }
-        int temp = nums[n-1];
-        nums.pop_back();
-        sortArray(nums);
-        insert(nums,temp);
-        return nums;
-    }
+void insert(vector<int>& nums, int temp){
+	int n = nums.size();
+	if(nums.size()==0 || nums[n-1]<=temp){
+		nums.push_back(temp);
+		return;
+	}
+	int val = nums[n-1];
+	nums.pop_back();
+	insert(nums,temp);
+	nums.push_back(val);
+}
+vector<int> sortArray(vector<int>& nums) {
+	int n = nums.size();
+	if(nums.size()==1){
+		return nums;
+	}
+	int temp = nums[n-1];
+	nums.pop_back();
+	sortArray(nums);
+	insert(nums,temp);
+	return nums;
+}
 ```
 ## v7 - Sort a stack
 ```embed
