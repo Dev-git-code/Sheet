@@ -555,6 +555,7 @@ aspectRatio: "52"
 
 - too much optimal solution not done.
 ```cpp 
+// same as atmost k unique
 int longestOnes(vector<int>& nums, int k) {
 	int n = nums.size();
 	int i = 0, j = 0;
@@ -581,4 +582,56 @@ int longestOnes(vector<int>& nums, int k) {
 }
 ```
 
-### 11. 
+### 11. Fruit Into Baskets
+
+```embed
+title: "L5. Fruit Into Baskets | 2 Pointers and Sliding Window Playlist"
+image: "https://i.ytimg.com/vi/e3bs0uA1NhQ/maxresdefault.jpg"
+description: "Check out TUF+:https://takeuforward.org/plus?source=youtubeFind DSA, LLD, OOPs, Core Subjects, 1000+ Premium Questions company wise, Aptitude, SQL, AI doubt ..."
+url: "https://www.youtube.com/watch?v=e3bs0uA1NhQ"
+favicon: ""
+aspectRatio: "56.25"
+```
+
+```embed
+title: "Fruit Into Baskets - LeetCode"
+image: "https://leetcode.com/static/images/LeetCode_Sharing.png"
+description: "Can you solve this real interview question? Fruit Into Baskets - You are visiting a farm that has a single row of fruit trees arranged from left to right. The trees are represented by an integer array fruits where fruits[i] is the type of fruit the ith tree produces.  You want to collect as much fruit as possible. However, the owner has some strict rules that you must follow:   * You only have two baskets, and each basket can only hold a single type of fruit. There is no limit on the amount of fruit each basket can hold.  * Starting from any tree of your choice, you must pick exactly one fruit from every tree (including the start tree) while moving to the right. The picked fruits must fit in one of your baskets.  * Once you reach a tree with fruit that cannot fit in your baskets, you must stop.  Given the integer array fruits, return the maximum number of fruits you can pick.     Example 1:   Input: fruits = [1,2,1] Output: 3 Explanation: We can pick from all 3 trees.   Example 2:   Input: fruits = [0,1,2,2] Output: 3 Explanation: We can pick from trees [1,2,2]. If we had started at the first tree, we would only pick from trees [0,1].   Example 3:   Input: fruits = [1,2,3,2,2] Output: 4 Explanation: We can pick from trees [2,3,2,2]. If we had started at the first tree, we would only pick from trees [1,2].      Constraints:   * 1 <= fruits.length <= 105  * 0 <= fruits[i] < fruits.length"
+url: "https://leetcode.com/problems/fruit-into-baskets/"
+favicon: ""
+aspectRatio: "52"
+```
+
+```cpp 
+// same as atmost 2 unique
+int totalFruit(vector<int>& fruits) {
+	int n = fruits.size();
+
+	int i = 0, j = 0;
+	unordered_map<int, int> freqMap;
+	int count = 2;
+	int maxLen = 0;
+	while(j<n){
+		freqMap[fruits[j]]++;
+
+		count = freqMap.size();
+
+		while(count > 2){
+			freqMap[fruits[i]]--;
+			if(freqMap[fruits[i]] == 0){
+				freqMap.erase(fruits[i]);
+			}
+			count = freqMap.size();
+			i++;
+		}
+
+		maxLen = max(maxLen, j-i+1);
+		j++;
+	   
+		
+	}
+	return maxLen;
+}
+```
+
+### 12. 
