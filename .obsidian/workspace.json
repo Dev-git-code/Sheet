@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AtoZ Sheet/Sliding window.md",
+                "file": "Recursion and DP notes/Aditya Verma DP Notes/Aditya Verma DP playlist.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Sliding window"
+              "title": "Aditya Verma DP playlist"
             }
           }
         ]
@@ -143,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "AtoZ Sheet/Sliding window.md",
+                "file": "Recursion and DP notes/Aditya Verma DP Notes/Aditya Verma DP playlist.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Sliding window"
+              "title": "Outline of Aditya Verma DP playlist"
             }
           },
           {
@@ -184,12 +184,15 @@
   },
   "active": "f3d8f51972f12855",
   "lastOpenFiles": [
-    "AtoZ Sheet/Arrays.md",
+    "Recursion and DP notes/Aditya Verma DP Notes/Matrix Chain Multiplication.md",
+    "Recursion and DP notes/Aditya Verma DP Notes/Knapsack.md",
+    "Recursion and DP notes/Aditya Verma DP Notes/DP on Trees.md",
+    "Recursion and DP notes/Aditya Verma Recursion Playlist.md",
     "AtoZ Sheet/Sliding window.md",
+    "AtoZ Sheet/Arrays.md",
     "AtoZ Sheet/Sliding Window and two pointer.md",
     "Recursion and DP notes/Abdul Bari DP.md",
     "AtoZ Sheet/1Index.md",
-    "Recursion and DP notes/Aditya Verma Recursion Playlist.md",
     "Sliding window notes",
     "Setup.md",
     "AtoZ Sheet/Bit Manipulation.md",
@@ -204,8 +207,6 @@
     "practice/prac.cpp",
     "practice",
     "New folder",
-    "Recursion and DP notes/Aditya Verma DP Notes/Matrix Chain Multiplication.md",
-    "Recursion and DP notes/Aditya Verma DP Notes/Knapsack.md",
     "Recursion and DP notes/Aditya Verma DP Notes/Aditya Verma DP playlist.md",
     "copilot-custom-prompts/Rewrite as tweet thread.md",
     "copilot-custom-prompts/Rewrite as tweet.md",
@@ -216,7 +217,6 @@
     "copilot-custom-prompts/Make shorter.md",
     "copilot-custom-prompts/Emojify.md",
     "copilot-custom-prompts/Explain like I am 5.md",
-    "copilot-custom-prompts/Simplify.md",
     "copilot-custom-prompts",
     "Recursion and DP notes/Aditya Verma DP Notes",
     "Topics",
