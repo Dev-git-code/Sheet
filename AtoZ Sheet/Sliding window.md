@@ -715,4 +715,50 @@ int characterReplacement(string s, int k) {
 
 - In the optimal solution, it says that there is not need to compute the `maxFreq` again, but I don't really understand why and also in a interview this will be very typical , so leaving optimal for now.
 
-### 13. 
+### 13. Binary Subarrays With Sum 
+
+```embed
+title: "L9. Binary Subarrays With Sum | 2 Pointers and Sliding Window Playlist"
+image: "https://i.ytimg.com/vi/XnMdNUkX6VM/maxresdefault.jpg"
+description: "Check out TUF+:https://takeuforward.org/plus?source=youtubeFind DSA, LLD, OOPs, Core Subjects, 1000+ Premium Questions company wise, Aptitude, SQL, AI doubt ..."
+url: "https://www.youtube.com/watch?v=XnMdNUkX6VM"
+favicon: ""
+aspectRatio: "56.25"
+```
+
+```embed
+title: "Binary Subarrays With Sum - LeetCode"
+image: "https://leetcode.com/static/images/LeetCode_Sharing.png"
+description: "Can you solve this real interview question? Binary Subarrays With Sum - Given a binary array nums and an integer goal, return the number of non-empty subarrays with a sum goal.  A subarray is a contiguous part of the array.     Example 1:   Input: nums = [1,0,1,0,1], goal = 2 Output: 4 Explanation: The 4 subarrays are bolded and underlined below: [1,0,1,0,1] [1,0,1,0,1] [1,0,1,0,1] [1,0,1,0,1]   Example 2:   Input: nums = [0,0,0,0,0], goal = 0 Output: 15      Constraints:   * 1 <= nums.length <= 3 * 104  * nums[i] is either 0 or 1.  * 0 <= goal <= nums.length"
+url: "https://leetcode.com/problems/binary-subarrays-with-sum/description/"
+favicon: ""
+aspectRatio: "52"
+```
+
+```cpp 
+int atMostSubarraysWithSum(vector<int>& nums, int goal){
+	if(goal < 0) return 0;
+	int n = nums.size();
+	int i = 0, j=0;
+	long long sum = 0;
+	int count = 0;
+
+	while(j<n){
+		sum += nums[j];
+
+		while(sum > goal){
+			sum -= nums[i];
+			i++;
+		}
+
+		count += j-i+1;
+		j++;
+	}
+	return count;
+}
+int numSubarraysWithSum(vector<int>& nums, int goal) {
+	return atMostSubarraysWithSum(nums, goal) - atMostSubarraysWithSum(nums, goal -1);
+}
+```
+
+### 
