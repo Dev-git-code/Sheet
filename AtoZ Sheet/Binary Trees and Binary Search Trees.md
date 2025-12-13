@@ -111,4 +111,48 @@ vector<int> postorderTraversal(TreeNode* root) {
 }
 ```
 
-### 2. 
+### 2. Level Order Traversal
+
+```embed
+title: "L8. Level Order Traversal of Binary Tree | BFS | C++ | Java"
+image: "https://i.ytimg.com/vi/EoAsWbO7sqg/maxresdefault.jpg"
+description: "Check out TUF+:https://takeuforward.org/plus?source=youtubeFind DSA, LLD, OOPs, Core Subjects, 1000+ Premium Questions company wise, Aptitude, SQL, AI doubt ..."
+url: "https://www.youtube.com/watch?v=EoAsWbO7sqg"
+favicon: ""
+aspectRatio: "56.25"
+```
+
+```embed
+title: "Binary Tree Level Order Traversal - LeetCode"
+image: "https://leetcode.com/static/images/LeetCode_Sharing.png"
+description: "Can you solve this real interview question? Binary Tree Level Order Traversal - Given the root of a binary tree, return the level order traversal of its nodes' values. (i.e., from left to right, level by level).     Example 1:  [https://assets.leetcode.com/uploads/2021/02/19/tree1.jpg]   Input: root = [3,9,20,null,null,15,7] Output: [[3],[9,20],[15,7]]   Example 2:   Input: root = [1] Output: [[1]]   Example 3:   Input: root = [] Output: []      Constraints:   * The number of nodes in the tree is in the range [0, 2000].  * -1000 <= Node.val <= 1000"
+url: "https://leetcode.com/problems/binary-tree-level-order-traversal/"
+favicon: ""
+aspectRatio: "52"
+```
+
+```cpp 
+vector<vector<int>> levelOrder(TreeNode* root) {
+
+	vector<vector<int>> ans;
+	if(root == NULL) return ans;
+	queue<TreeNode*> q;
+	q.push(root);
+
+	while(!q.empty()){
+		int s = q.size();
+		vector<int> level;
+
+		for(int i = 0;i<s;i++){
+			TreeNode* node = q.front();
+			q.pop();
+			if(node->left) q.push(node->left);
+			if(node->right) q.push(node->right);
+			level.push_back(node->val);
+		}
+		ans.push_back(level);
+	}
+
+	return ans;
+}
+```
