@@ -111,7 +111,6 @@ void insert(stack<int> &s,int temp){
 }
 void SortedStack :: sort()
 {
-   //Your code here
    if(s.size() == 1){
        return;
    }
