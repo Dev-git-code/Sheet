@@ -682,5 +682,36 @@ int characterReplacement(string s, int k) {
 ```
 
 ```cpp 
+// Better approach
+int characterReplacement(string s, int k) {
+   int n = s.size();
 
+   int i = 0, j = 0;
+   unordered_map<char, int> freqMap;
+   int maxFreq = 0;
+   int maxLen = 0;
+   while(j<n){
+	
+		freqMap[s[j]]++;
+		maxFreq = max(maxFreq, freqMap[s[j]]);
+
+		while((j-i+1) - maxFreq > k){
+			freqMap[s[i]]--;
+			maxFreq = 0;
+			for(const auto& it: freqMap){
+				maxFreq = max(maxFreq, it.second);
+			}
+			i++;
+		}
+
+		maxLen = max(maxLen, j-i+1);
+		j++;
+	}
+
+	return maxLen;
+	
+}
 ```
+
+- In the optimal solution, it says that there is not need to compute the maxFreq again, but I don't really understand why and also in a interview this will be very typical so, so leaving optimal for now.
+
