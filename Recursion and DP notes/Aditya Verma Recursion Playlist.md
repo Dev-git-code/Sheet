@@ -25,7 +25,7 @@ url: "https://youtube.com/playlist?list=PL_z_8CaSLPWeT1ffjiImo0sYTcnLzo-wY&si=mO
 	    if (base_condition)
 	        return base_value;
 	
-	    // Induction hypothesis
+	    // Hypothesis
 	    ReturnType smallerResult = functionName(smaller_input);
 	
 	    // Induction step
