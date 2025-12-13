@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sliding window notes/Sliding window.md",
+                "file": "AtoZ Sheet/Sliding window.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
@@ -143,7 +143,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Sliding window notes/Sliding window.md",
+                "file": "AtoZ Sheet/Sliding window.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -185,7 +185,7 @@
   "active": "f3d8f51972f12855",
   "lastOpenFiles": [
     "AtoZ Sheet/Sliding Window and two pointer.md",
-    "Sliding window notes/Sliding window.md",
+    "AtoZ Sheet/Sliding window.md",
     "Recursion and DP notes/Abdul Bari DP.md",
     "AtoZ Sheet/Arrays.md",
     "AtoZ Sheet/1Index.md",
