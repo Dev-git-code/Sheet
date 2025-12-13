@@ -634,4 +634,53 @@ int totalFruit(vector<int>& fruits) {
 }
 ```
 
-### 12. 
+### 12. Longest Repeating Character Replacement
+
+```embed
+title: "L8. Longest Repeating Character Replacement | 2 Pointers and Sliding Window Playlist"
+image: "https://i.ytimg.com/vi/_eNhaDCr6P0/maxresdefault.jpg"
+description: "Check out TUF+:https://takeuforward.org/plus?source=youtubeFind DSA, LLD, OOPs, Core Subjects, 1000+ Premium Questions company wise, Aptitude, SQL, AI doubt ..."
+url: "https://www.youtube.com/watch?v=_eNhaDCr6P0"
+favicon: ""
+aspectRatio: "56.25"
+```
+
+```embed
+title: "Longest Repeating Character Replacement - LeetCode"
+image: "https://leetcode.com/static/images/LeetCode_Sharing.png"
+description: "Can you solve this real interview question? Longest Repeating Character Replacement - You are given a string s and an integer k. You can choose any character of the string and change it to any other uppercase English character. You can perform this operation at most k times.  Return the length of the longest substring containing the same letter you can get after performing the above operations.     Example 1:   Input: s = \"ABAB\", k = 2 Output: 4 Explanation: Replace the two 'A's with two 'B's or vice versa.   Example 2:   Input: s = \"AABABBA\", k = 1 Output: 4 Explanation: Replace the one 'A' in the middle with 'B' and form \"AABBBBA\". The substring \"BBBB\" has the longest repeating letters, which is 4. There may exists other ways to achieve this answer too.     Constraints:   * 1 <= s.length <= 105  * s consists of only uppercase English letters.  * 0 <= k <= s.length"
+url: "https://leetcode.com/problems/longest-repeating-character-replacement/"
+favicon: ""
+aspectRatio: "52"
+```
+
+```cpp 
+//Brute force
+int characterReplacement(string s, int k) {
+	int n = s.size();
+	int maxLen = 0;
+	
+	for(int i = 0;i<n;i++){
+		unordered_map<char, int> freqMap;
+		int maxFreq = 0;
+
+		for(int j = i;j<n;j++){
+			freqMap[s[j]]++;
+			maxFreq = max(maxFreq, freqMap[s[j]]);
+
+			int strLen = j-i+1;
+			if(strLen - maxFreq <= k){
+				maxLen = max(maxLen, strLen);
+			}else{
+				break;
+			}
+		}
+	}
+
+	return maxLen;
+}
+```
+
+```cpp 
+
+```
