@@ -79,3 +79,36 @@ vector<int> inorderTraversal(TreeNode* root) {
 
 #### 1.3. Postorder Traversal
 
+```embed
+title: "L7. Postorder Traversal of Binary Tree | C++ | Java | Code Explanation"
+image: "https://i.ytimg.com/vi/COQOU6klsBg/maxresdefault.jpg"
+description: "Check out TUF+:https://takeuforward.org/plus?source=youtubeFind DSA, LLD, OOPs, Core Subjects, 1000+ Premium Questions company wise, Aptitude, SQL, AI doubt ..."
+url: "https://www.youtube.com/watch?v=COQOU6klsBg"
+favicon: ""
+aspectRatio: "56.25"
+```
+
+```embed
+title: "Binary Tree Postorder Traversal - LeetCode"
+image: "https://leetcode.com/static/images/LeetCode_Sharing.png"
+description: "Can you solve this real interview question? Binary Tree Postorder Traversal - Given the root of a binary tree, return the postorder traversal of its nodes' values.     Example 1:  Input: root = [1,null,2,3]  Output: [3,2,1]  Explanation:  [https://assets.leetcode.com/uploads/2024/08/29/screenshot-2024-08-29-202743.png]  Example 2:  Input: root = [1,2,3,4,5,null,8,null,null,6,7,9]  Output: [4,6,7,5,2,9,8,3,1]  Explanation:  [https://assets.leetcode.com/uploads/2024/08/29/tree_2.png]  Example 3:  Input: root = []  Output: []  Example 4:  Input: root = [1]  Output: [1]     Constraints:   * The number of the nodes in the tree is in the range [0, 100].  * -100 <= Node.val <= 100     Follow up: Recursive solution is trivial, could you do it iteratively?"
+url: "https://leetcode.com/problems/binary-tree-postorder-traversal/"
+favicon: ""
+aspectRatio: "52"
+```
+
+```cpp 
+void postorder(TreeNode* root, vector<int>& res){
+	if(root == nullptr) return;
+	postorder(root->left,res);
+	postorder(root->right,res);
+	res.push_back(root->val);
+}
+vector<int> postorderTraversal(TreeNode* root) {
+	vector<int> res;
+	postorder(root,res);
+	return res;
+}
+```
+
+### 2. 
