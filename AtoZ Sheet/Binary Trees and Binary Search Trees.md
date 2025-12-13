@@ -1,3 +1,4 @@
+## Traversals ( Basic )
 ### 1. DFS Traversal
 
 #### 1.1. Preorder Traversal
@@ -156,3 +157,9 @@ vector<vector<int>> levelOrder(TreeNode* root) {
 	return ans;
 }
 ```
+
+- Rest of the iteration will be done at last, they are just the complex solution of the same problem.
+
+## Medium
+
+
