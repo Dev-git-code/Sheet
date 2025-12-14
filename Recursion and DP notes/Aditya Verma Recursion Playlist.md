@@ -133,22 +133,21 @@ url: "https://practice.geeksforgeeks.org/problems/delete-middle-element-of-a-sta
 
 ```cpp
 void solve(stack<int>& s, int k){
-        if(k==1){
-            s.pop();
-            return;
-        }
-        int temp = s.top();
-        s.pop();
-        solve(s,k-1);
-        s.push(temp);
-    }
-    void deleteMid(stack<int>&s, int n)
-    {
-        // code here.. 
-        if(n==0) return;
-        int k = n/2+1;
-        solve(s,k);
-    }
+	if(k==1){
+		s.pop();
+		return;
+	}
+	int temp = s.top();
+	s.pop();
+	solve(s,k-1);
+	s.push(temp);
+}
+void deleteMid(stack<int>&s, int n)
+{
+	if(n==0) return;
+	int k = n/2+1;
+	solve(s,k);
+}
 ```
 ## v9 - Reverse a Stack 
 ```embed
