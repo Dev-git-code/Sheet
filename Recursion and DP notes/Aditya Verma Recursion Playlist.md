@@ -208,24 +208,24 @@ url: "https://www.geeksforgeeks.org/problems/tower-of-hanoi-1587115621/1"
 ```
 
 ```cpp
-	void towerHanoi(int N, int start, int end, int h, long long &count){
-        if(N==1){
-            cout<<"move disk "<< N <<" from rod "<<start<<" to rod "<<end<<endl;
-            count++;
-            return;
-        }
-        towerHanoi(N-1,start,h,end,count);
-        cout<<"move disk "<< N <<" from rod "<<start<<" to rod "<<end<<endl;
-        count++;
-        towerHanoi(N-1,h,end,start,count);
-        
-    }
-    
-    long long toh(int N, int from, int to, int aux) {
-        long long count = 0;
-        towerHanoi(N, 1,3,2, count);
-        return count;
-    }
+void towerHanoi(int N, int start, int end, int h, long long &count){
+	if(N==1){
+		cout<<"move disk "<< N <<" from rod "<<start<<" to rod "<<end<<endl;
+		count++;
+		return;
+	}
+	towerHanoi(N-1,start,h,end,count);
+	cout<<"move disk "<< N <<" from rod "<<start<<" to rod "<<end<<endl;
+	count++;
+	towerHanoi(N-1,h,end,start,count);
+	
+}
+
+long long toh(int N, int from, int to, int aux) {
+	long long count = 0;
+	towerHanoi(N, 1,3,2, count);
+	return count;
+}
 ```
 
 ## v12 - Print Subsets 
