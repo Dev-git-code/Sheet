@@ -158,24 +158,24 @@ url: "https://www.geeksforgeeks.org/problems/reverse-a-stack/1"
 ```
 
 ```cpp
-	void insert(stack<int>& s, int temp){
-        if(s.size()==0){
-            s.push(temp);
-            return;
-        }
-        int val = s.top();
-        s.pop();
-        insert(s,temp);
-        s.push(val);
-    }
-    void reverse(stack<int> &s){
-        int n = s.size();
-        if(n==1) return;
-        int temp = s.top();
-        s.pop();
-        Reverse(s);
-        insert(s,temp);
-    }
+void insert(stack<int>& s, int temp){
+	if(s.size()==0){
+		s.push(temp);
+		return;
+	}
+	int val = s.top();
+	s.pop();
+	insert(s,temp);
+	s.push(val);
+}
+void reverse(stack<int> &s){
+	int n = s.size();
+	if(n==1) return;
+	int temp = s.top();
+	s.pop();
+	Reverse(s);
+	insert(s,temp);
+}
 ```
 ## v10 - Kth Symbol in Grammar 
 
