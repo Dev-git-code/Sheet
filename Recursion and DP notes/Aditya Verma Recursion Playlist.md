@@ -449,43 +449,43 @@ url: "https://leetcode.com/problems/generate-parentheses"
 	- at the leaf nodes open = 0 and close = 0, so it becomes the base condition.
 - the above conditions can be simplified to: 
 	- if open!=0, then we always have choice to add open bracket
-	- if close > open, then we always have choice to add close bracket
+	- if close > open, then we  have choice to add close bracket and open bracket both
 
 ```cpp
- void solve(string ip, string op, vector<string>& ans){
-        // base case
-        if(ip.size()==0){
-            ans.push_back(op);
-            return;
-        }
-        // if alpha
-        if(isalpha(ip[0])){
-            // ch1: add lowercase
-            string op1 = op;
-            op1.push_back(tolower(ip[0]));
-            // ch2: add uppercase
-            string op2 = op;
-            op2.push_back(toupper(ip[0]));
-            // make the ip smaller
-            ip.erase(ip.begin()+0); // ip[0] erased
-            solve(ip,op1,ans);
-            solve(ip,op2,ans);
+void solve(string ip, string op, vector<string>& ans){
+	// base case
+	if(ip.size()==0){
+		ans.push_back(op);
+		return;
+	}
+	// if alpha
+	if(isalpha(ip[0])){
+		// ch1: add lowercase
+		string op1 = op;
+		op1.push_back(tolower(ip[0]));
+		// ch2: add uppercase
+		string op2 = op;
+		op2.push_back(toupper(ip[0]));
+		// make the ip smaller
+		ip.erase(ip.begin()+0); // ip[0] erased
+		solve(ip,op1,ans);
+		solve(ip,op2,ans);
 
-        }else{
-             // add the number
-             string op3 = op;
-             op3.push_back(ip[0]);
-             ip.erase(ip.begin()+0);
-             solve(ip,op3,ans); 
-        }
-        
-           
-    }
-    vector<string> letterCasePermutation(string s) {
-        vector<string> ans;
-        solve(s,"",ans);
-        return ans;
-    }
+	}else{
+		 // add the number
+		 string op3 = op;
+		 op3.push_back(ip[0]);
+		 ip.erase(ip.begin()+0);
+		 solve(ip,op3,ans); 
+	}
+	
+	   
+}
+vector<string> letterCasePermutation(string s) {
+	vector<string> ans;
+	solve(s,"",ans);
+	return ans;
+}
 ```
 
 ## v18 - Print N-bit binary numbers having more 1’s than 0’s for any prefix
