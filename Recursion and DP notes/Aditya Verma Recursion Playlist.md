@@ -441,49 +441,33 @@ url: "https://leetcode.com/problems/generate-parentheses"
 
 - here , close = number of close brackets still left ; open = number of open brackets still left 
 - From observation of recursive tree we can see: 
-	- if close > open and open > 0 then we have two choices: 
-		- ch1 : add a open bracket
-		- ch2 : add a close bracket
-	- and when close <= open then we have only one choice 
-		- ch1 : add open bracket
-	- at the leaf nodes open = 0 and close = 0, so it becomes the base condition.
-- the above conditions can be simplified to: 
 	- if open!=0, then we always have choice to add open bracket
-	- if close > open, then we  have choice to add close bracket and open bracket both
+	- if close > open, then we  have choice to add close bracket
 
 ```cpp
-void solve(string ip, string op, vector<string>& ans){
-	// base case
-	if(ip.size()==0){
+void solve(string op, int open, int close, vector<string>& ans){
+	if(open == 0 && close == 0){
 		ans.push_back(op);
 		return;
 	}
-	// if alpha
-	if(isalpha(ip[0])){
-		// ch1: add lowercase
-		string op1 = op;
-		op1.push_back(tolower(ip[0]));
-		// ch2: add uppercase
-		string op2 = op;
-		op2.push_back(toupper(ip[0]));
-		// make the ip smaller
-		ip.erase(ip.begin()+0); // ip[0] erased
-		solve(ip,op1,ans);
-		solve(ip,op2,ans);
 
-	}else{
-		 // add the number
-		 string op3 = op;
-		 op3.push_back(ip[0]);
-		 ip.erase(ip.begin()+0);
-		 solve(ip,op3,ans); 
+	if(open!=0){ // open 1
+		string op1 = op;
+		op1.push_back('(');
+		solve(op1, open-1, close, ans);
 	}
 	
-	   
+	if(close > open){ // open 1 close 3
+		string op2 = op;
+		op2.push_back(')');
+		solve(op2, open, close-1, ans);
+	}
 }
-vector<string> letterCasePermutation(string s) {
+vector<string> generateParenthesis(int n) {
 	vector<string> ans;
-	solve(s,"",ans);
+	int open = n, close = n;
+	string op = "";
+	solve(op, open, close, ans);
 	return ans;
 }
 ```
