@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Recursion and DP notes/Aditya Verma Recursion Playlist.md",
+                "file": "AtoZ Sheet/Recursion.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Aditya Verma Recursion Playlist"
+              "title": "Recursion"
             }
           }
         ]
@@ -143,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Recursion and DP notes/Aditya Verma Recursion Playlist.md",
+                "file": "AtoZ Sheet/Recursion.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Aditya Verma Recursion Playlist"
+              "title": "Outline of Recursion"
             }
           },
           {
@@ -184,8 +184,8 @@
   },
   "active": "f3d8f51972f12855",
   "lastOpenFiles": [
-    "AtoZ Sheet/Binary Trees and Binary Search Trees.md",
     "Recursion and DP notes/Aditya Verma Recursion Playlist.md",
+    "AtoZ Sheet/Binary Trees and Binary Search Trees.md",
     "AtoZ Sheet/Recursion.md",
     "AtoZ Sheet/1Index.md",
     "AtoZ Sheet/Arrays.md",
