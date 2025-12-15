@@ -248,24 +248,24 @@ description: "Level up your coding skills and quickly land a job. This is the be
 url: "https://leetcode.com/problems/subsets"
 ```
  ```cpp
-  void solve(vector<int> ip, vector<int> op, vector<vector<int>> &ans){
-        if(ip.empty()){
-            ans.push_back(op);
-            return;
-        }
-        vector<int> op1 = op;
-        vector<int> op2 = op;
-        op2.push_back(ip[0]);
-        ip.erase(ip.begin()+0);
-        solve(ip,op1,ans);
-        solve(ip,op2,ans);
-    }
-    vector<vector<int>> subsets(vector<int>& nums) {
-        vector<int> op;
-        vector<vector<int>> ans;
-        solve(nums,op,ans);
-        return ans;
-    }
+void solve(vector<int> ip, vector<int> op, vector<vector<int>> &ans){
+	if(ip.empty()){
+		ans.push_back(op);
+		return;
+	}
+	vector<int> op1 = op;
+	vector<int> op2 = op;
+	op2.push_back(ip[0]);
+	ip.erase(ip.begin()+0);
+	solve(ip,op1,ans);
+	solve(ip,op2,ans);
+}
+vector<vector<int>> subsets(vector<int>& nums) {
+	vector<int> op;
+	vector<vector<int>> ans;
+	solve(nums,op,ans);
+	return ans;
+}
 ```
 
 ## v13 - Print unique subsets And Variations
@@ -304,32 +304,32 @@ url: " https://leetcode.com/problems/subsets-ii"
 
 ```cpp
 void solve(vector<int> ip,vector<int> op, set<vector<int>> &s){
-        // base case 
-        if(ip.empty()){
-            sort(op.begin(),op.end());
-            s.insert(op);
-            return;
-        }
-        // ch1 :dont take ip[0] from ip to op
-        vector<int> op1 = op;
-        op1.push_back(ip[0]);
-        ip.erase(ip.begin()+0); // ip[0] erased
-        solve(ip,op1,s);
-        // ch2 :take ip[0] from ip to op
-        solve(ip,op,s);
-    }
+	// base case 
+	if(ip.empty()){
+		sort(op.begin(),op.end());
+		s.insert(op);
+		return;
+	}
+	// ch1 :dont take ip[0] from ip to op
+	vector<int> op1 = op;
+	op1.push_back(ip[0]);
+	ip.erase(ip.begin()+0); // ip[0] erased
+	solve(ip,op1,s);
+	// ch2 :take ip[0] from ip to op
+	solve(ip,op,s);
+}
 
-    vector<vector<int>> subsetsWithDup(vector<int>& nums) {
-        set<vector<int>> s;
-        vector<int> op; // subset
-        vector<vector<int>> ans;
-        solve(nums,op,s);
-        for(auto &e:s){
-            ans.push_back(e);
-        }
-        return ans;
+vector<vector<int>> subsetsWithDup(vector<int>& nums) {
+	set<vector<int>> s;
+	vector<int> op; // subset
+	vector<vector<int>> ans;
+	solve(nums,op,s);
+	for(auto &e:s){
+		ans.push_back(e);
+	}
+	return ans;
 
-    }
+}
 ```
 - this is not the best solution, learn backtracking and then see the solutions for this problem.
 ## v14 - Permutation with spaces
