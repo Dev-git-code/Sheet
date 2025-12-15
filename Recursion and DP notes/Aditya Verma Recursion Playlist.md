@@ -487,28 +487,28 @@ url: "https://www.geeksforgeeks.org/problems/print-n-bit-binary-numbers-having-m
 	 - choice of 0 is available only when no. of ones > no. of zeros
 ```cpp
 void solve(int ones,int zeros, string op, int n, vector<string> &ans){
-        // base case
-        if(n==0){
-            ans.push_back(op);
-            return; // never forget
-        }
-        // choice of 1 always there
-        string op1 = op;
-        op1.push_back('1');
-        solve(ones+1,zeros,op1,n-1,ans);
-        // choice of zero only when ones>zeros
-        if(ones>zeros){
-            string op2 = op;
-            op2.push_back('0');
-            solve(ones,zeros+1,op2,n-1,ans);
-        }
-    }
-	vector<string> NBitBinary(int N)
-	{
-	    vector<string> ans;
-	    solve(0,0,"",N,ans);
-	    return ans;
+	// base case
+	if(n==0){
+		ans.push_back(op);
+		return; // never forget
 	}
+	// choice of 1 always there
+	string op1 = op;
+	op1.push_back('1');
+	solve(ones+1,zeros,op1,n-1,ans);
+	// choice of zero only when ones>zeros
+	if(ones>zeros){
+		string op2 = op;
+		op2.push_back('0');
+		solve(ones,zeros+1,op2,n-1,ans);
+	}
+}
+vector<string> NBitBinary(int N)
+{
+	vector<string> ans;
+	solve(0,0,"",N,ans);
+	return ans;
+}
 ```
 ## v19 - Josephus Problem | Game of Death in a circle | Execution in Circle
 ```embed
