@@ -350,31 +350,31 @@ url: "https://www.geeksforgeeks.org/problems/permutation-with-spaces3627/1"
 
 ```cpp
 void solve(string ip,string op,vector<string> &ans){
-        // base case 
-        if(ip.size()==0){
-            ans.push_back(op);
-            return;
-        }
-        // ch1: include element from ip to op with space
-        string op1 = op + " " + ip[0];
-        // ch2: include element from ip to op without space
-        string op2 = op + ip[0];
-        // make the ip smaller
-        ip.erase(ip.begin()+0); // ip[0] erased
-        // call solve for child nodes 
-        solve(ip,op1,ans);
-        solve(ip,op2,ans);
-    }
+	// base case 
+	if(ip.size()==0){
+		ans.push_back(op);
+		return;
+	}
+	// ch1: include element from ip to op with space
+	string op1 = op + " " + ip[0];
+	// ch2: include element from ip to op without space
+	string op2 = op + ip[0];
+	// make the ip smaller
+	ip.erase(ip.begin()+0); // ip[0] erased
+	// call solve for child nodes 
+	solve(ip,op1,ans);
+	solve(ip,op2,ans);
+}
 
-    vector<string> permutation(string s){
-        vector<string> ans;
-        string op;
-        op.push_back(s[0]);
-        s.erase(s.begin()+0); // s[0] erased
-        solve(s,op,ans);
-        sort(ans.begin(),ans.end());
-        return ans;
-    }
+vector<string> permutation(string s){
+	vector<string> ans;
+	string op;
+	op.push_back(s[0]);
+	s.erase(s.begin()+0); // s[0] erased
+	solve(s,op,ans);
+	sort(ans.begin(),ans.end());
+	return ans;
+}
 ```
 
 
@@ -394,39 +394,39 @@ url: " https://leetcode.com/problems/letter-case-permutation/"
 - if it is not then just one choice
 	- ch: add the number to the op
 ```cpp
- void solve(string ip, string op, vector<string>& ans){
-        // base case
-        if(ip.size()==0){
-            ans.push_back(op);
-            return;
-        }
-        // if alpha
-        if(isalpha(ip[0])){
-            // ch1: add lowercase
-            string op1 = op;
-            op1.push_back(tolower(ip[0]));
-            // ch2: add uppercase
-            string op2 = op;
-            op2.push_back(toupper(ip[0]));
-            // make the ip smaller
-            ip.erase(ip.begin()+0); // ip[0] erased
-            solve(ip,op1,ans);
-            solve(ip,op2,ans);
+void solve(string ip, string op, vector<string>& ans){
+	// base case
+	if(ip.size()==0){
+		ans.push_back(op);
+		return;
+	}
+	// if alpha
+	if(isalpha(ip[0])){
+		// ch1: add lowercase
+		string op1 = op;
+		op1.push_back(tolower(ip[0]));
+		// ch2: add uppercase
+		string op2 = op;
+		op2.push_back(toupper(ip[0]));
+		// make the ip smaller
+		ip.erase(ip.begin()+0); // ip[0] erased
+		solve(ip,op1,ans);
+		solve(ip,op2,ans);
 
-        }else{
-             // add the number
-             string op1 = op;
-             op1.push_back(ip[0]);
-             ip.erase(ip.begin()+0);
-             solve(ip,op1,ans); 
-        }
-    
-    }
-    vector<string> letterCasePermutation(string s) {
-        vector<string> ans;
-        solve(s,"",ans);
-        return ans;
-    }
+	}else{
+		 // add the number
+		 string op1 = op;
+		 op1.push_back(ip[0]);
+		 ip.erase(ip.begin()+0);
+		 solve(ip,op1,ans); 
+	}
+
+}
+vector<string> letterCasePermutation(string s) {
+	vector<string> ans;
+	solve(s,"",ans);
+	return ans;
+}
 ```
 
 ## v17 - Generate all Balanced Parentheses
