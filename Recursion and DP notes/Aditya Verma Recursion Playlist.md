@@ -355,6 +355,36 @@ vector<vector<int>> subsetsWithDup(vector<int>& nums) {
 
 }
 ```
+
+```cpp 
+void solve(vector<int>&ip,int idx, int n, vector<int> op, set<vector<int>> &s){
+	// base case 
+	if(idx == n){
+		sort(op.begin(),op.end());
+		s.insert(op);
+		return;
+	}
+	// ch1 :dont take ip[idx] from ip to op
+	vector<int> op1 = op; 
+	op1.push_back(ip[idx]);
+	solve(ip,idx+1,n,op1,s);
+	// ch2 :take ip[idx] from ip to op
+	solve(ip,idx+1,n,op,s);
+}
+
+vector<vector<int>> subsetsWithDup(vector<int>& nums) {
+	set<vector<int>> s;
+	vector<int> op; // subset
+	vector<vector<int>> ans;
+	int n = nums.size();
+	int idx = 0;
+	solve(nums,idx,n,op,s);
+	for(auto &e:s){
+		ans.push_back(e);
+	}
+	return ans;
+}
+```
 - this is not the best solution, learn backtracking and then see the solutions for this problem.
 ## v14 - Permutation with spaces
 ```embed
@@ -543,29 +573,29 @@ url: "https://practice.geeksforgeeks.org/problems/josephus-problem/1"
 ```
 
 ```cpp
- void solve(vector<int> v, int k,int index,int &ans){
-        // base case 
-        if(v.size()==1){
-            ans = v[0];
-            return;
-        }
-        // Induction : which person to kill
-        index = (index+k)%v.size();
-        // smaller input
-        v.erase(v.begin()+index);
-        // recursive call
-        solve(v,k,index,ans);
-    }
-    int josephus(int n, int k)
-    {
-       vector<int> v;
-       int ans;
-       // vector with all the people
-       for(int i =1;i<=n;i++) v.push_back(i);
-       solve(v,k-1,0,ans);
-       return ans;
-       
-    }
+void solve(vector<int> v, int k,int index,int &ans){
+	// base case 
+	if(v.size()==1){
+		ans = v[0];
+		return;
+	}
+	// Induction : which person to kill
+	index = (index+k)%v.size();
+	// smaller input
+	v.erase(v.begin()+index);
+	// recursive call
+	solve(v,k,index,ans);
+}
+int josephus(int n, int k)
+{
+   vector<int> v;
+   int ans;
+   // vector with all the people
+   for(int i =1;i<=n;i++) v.push_back(i);
+   solve(v,k-1,0,ans);
+   return ans;
+   
+}
 ```
 
 ### Find the Winner of the Circular Game --> same as josephs problem
