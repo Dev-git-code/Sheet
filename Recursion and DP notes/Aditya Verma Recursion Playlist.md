@@ -311,7 +311,7 @@ void solve(vector<int> ip,vector<int> op, set<vector<int>> &s){
 		return;
 	}
 	// ch1 :dont take ip[0] from ip to op
-	vector<int> op1 = op;
+	vector<int> op1 = op; 
 	op1.push_back(ip[0]);
 	ip.erase(ip.begin()+0); // ip[0] erased
 	solve(ip,op1,s);
