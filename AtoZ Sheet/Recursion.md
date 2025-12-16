@@ -35,3 +35,53 @@ double myPow(double x, int n) {
 }
 ```
 
+### Count subsequences/subsets with sum k
+
+```embed
+title: "L7. All Kind of Patterns in Recursion | Print All | Print one | Count"
+image: "https://i.ytimg.com/vi/eQCS_v3bw0Q/maxresdefault.jpg"
+description: "Check out TUF+:https://takeuforward.org/plus?source=youtubeFind DSA, LLD, OOPs, Core Subjects, 1000+ Premium Questions company wise, Aptitude, SQL, AI doubt ..."
+url: "https://www.youtube.com/watch?v=eQCS_v3bw0Q"
+favicon: ""
+aspectRatio: "56.25"
+```
+
+```embed
+title: "Code 360 by Coding Ninjas"
+image: "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wI iBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI5OTk5OXB4IiBoZWlnaHQ9Ijk5OTk5cHgiIHZpZXdCb3g9IjAgMCA5OTk5OSA5OTk5OSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8v d3d3LnczLm9yZy8xOTk5L3hsaW5rIj48ZyBzdHJva2U9Im5vbmUiIGZpbGw9Im5vbmUiIGZpbGwtb3BhY2l0eT0iMCI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9Ijk5OTk5IiBoZWlnaHQ9Ijk5OTk5Ij48L3JlY3Q+IDwvZz4gPC9zdmc+"
+description: ""
+url: "https://www.naukri.com/code360/problems/count-subsets-with-sum-k_3952532?leftPanelTabValue=PROBLEM"
+favicon: ""
+aspectRatio: "100"
+```
+
+```cpp 
+void solve(vector<int>& arr,int idx, int k, long long sum, long long& ways){
+	if(idx == arr.size()){
+		if(sum == k) ways++;
+		return;
+	}
+
+	long long sum1 = sum;
+	long long sum2 = sum;
+
+	sum1 += arr[idx];
+
+	solve(arr,idx+1,k,sum1,ways); // take
+	solve(arr,idx+1,k,sum2,ways); // not take
+}
+
+
+int findWays(vector<int>& arr, int k)
+{
+	long long ways = 0;
+	long long sum = 0;
+	int mod = 1e9 + 7;
+	int idx = 0;
+	solve(arr, idx, k, sum, ways);
+	return ways % mod;
+}
+
+```
+
+- In Aditya verma notes, in the subset he remove the element from the input which is costly especially for an array, but here we use size and index to handle that, so for aditya verma code, write the codes once again with size and idx.

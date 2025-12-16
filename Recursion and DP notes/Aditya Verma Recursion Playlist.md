@@ -268,6 +268,30 @@ vector<vector<int>> subsets(vector<int>& nums) {
 }
 ```
 
+- Code using size and idx instead of erasing the first element of input in the array( which can be very costly).
+
+```cpp 
+void solve(vector<int> &ip, int idx, int n, vector<int> op, vector<vector<int>> &ans){
+	if(idx == n){
+		ans.push_back(op);
+		return;
+	}
+	vector<int> op1 = op;
+	vector<int> op2 = op;
+	op2.push_back(ip[idx]);
+	solve(ip,idx+1, n, op1,ans); // take
+	solve(ip,idx+1, n, op2,ans); // not take
+}
+vector<vector<int>> subsets(vector<int>& nums) {
+	vector<int> op;
+	vector<vector<int>> ans;
+	int idx = 0;
+	int n = nums.size();
+	solve(nums,idx,n,op,ans);
+	return ans;
+}
+```
+
 ## v13 - Print unique subsets And Variations
 - Power set is also all subsets of a set so the above code can be used to find Power set also. 
 ### Substring vs Subsequence vs Subsets 
