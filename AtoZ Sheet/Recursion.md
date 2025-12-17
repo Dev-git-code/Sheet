@@ -86,5 +86,36 @@ int findWays(vector<int>& arr, int k)
 
 - In the above code I have passed ways as a parameter to the recursive function but we can also write proper recursion for this.
 
+```cpp 
+int solve(vector<int>& arr,int& n,int idx, int k, long long sum){
+
+	
+	if(idx == n){
+		if(sum == k) return 1;
+		else return 0;
+	}
+
+	long long sum1 = sum;
+	long long sum2 = sum;
+
+	sum1 += arr[idx];
+
+	int l = solve(arr,n,idx+1,k,sum1); // take
+	int r = solve(arr,n,idx+1,k,sum2); // not take
+	
+	return l+r;
+}
+
+
+int findWays(vector<int>& arr, int k)
+{
+	long long sum = 0;
+	int mod = 1e9 + 7;
+	int idx = 0;
+	int n = arr.size();
+	return solve(arr, n, idx, k, sum);
+}
+```
+
 - In Aditya verma notes, in the subset he remove the element from the input which is costly especially for an array, but here we use size and index to handle that, so for aditya verma code, write the codes once again with size and idx.
 
