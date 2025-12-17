@@ -84,4 +84,7 @@ int findWays(vector<int>& arr, int k)
 
 ```
 
+- In the above code I have passed ways as a parameter to the recursive function but we can also write proper recursion for this.
+
 - In Aditya verma notes, in the subset he remove the element from the input which is costly especially for an array, but here we use size and index to handle that, so for aditya verma code, write the codes once again with size and idx.
+
