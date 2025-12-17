@@ -35,7 +35,7 @@ double myPow(double x, int n) {
 }
 ```
 
-### Count subsequences/subsets with sum k
+### Count or check subsequences/subsets with sum k
 
 ```embed
 title: "L7. All Kind of Patterns in Recursion | Print All | Print one | Count"
@@ -89,7 +89,7 @@ int findWays(vector<int>& arr, int k)
 ```cpp 
 int solve(vector<int>& arr,int& n,int idx, int k, long long sum){
 
-	
+	if(sum == k) return 0;
 	if(idx == n){
 		if(sum == k) return 1;
 		else return 0;
@@ -118,4 +118,41 @@ int findWays(vector<int>& arr, int k)
 ```
 
 - In Aditya verma notes, in the subset he remove the element from the input which is costly especially for an array, but here we use size and index to handle that, so for aditya verma code, write the codes once again with size and idx.
+
+```embed
+title: "Check if there exists a subsequence with sum K | Practice | GeeksforGeeks "
+image: "https://media.geeksforgeeks.org/wp-content/cdn-uploads/gfg_200x200-min.png"
+description: "Given an array arr&nbsp;and&nbsp;target sum k,&nbsp;check whether&nbsp;there exists a subsequence&nbsp;such that the sum of all elements in the subsequence equals the given&nbsp;target sum(k).   Example:   Input:  arr = [10,1,2,7,6,1,5], k = 8."
+url: "https://www.geeksforgeeks.org/problems/check-if-there-exists-a-subsequence-with-sum-k/1"
+favicon: ""
+aspectRatio: "100"
+```
+
+```cpp 
+bool solve(vector<int>& arr, int& n, int i, int& k, int sum){
+	if(sum > k) return false;
+	if(i==n){
+		if(sum == k) return true;
+		else return false;
+	}
+	
+	int sum1 = sum + arr[i];
+	int sum2 = sum;
+	
+	if(solve(arr, n, i+1, k, sum1) == true){
+		return true;
+	}
+	if(solve(arr, n, i+1, k, sum2) == true){
+		return true;
+	}
+	
+	return false;
+}
+bool checkSubsequenceSum(int n, vector<int>& arr, int k) {
+	int i = 0;
+	int sum = 0;
+	return solve(arr,n,i,k,sum);
+	
+}
+```
 
