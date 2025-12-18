@@ -34,7 +34,6 @@ double myPow(double x, int n) {
   return solve(x,N);
 }
 ```
-
 ### 2. Count or check subsequences/subsets with sum k
 
 ```embed
@@ -228,36 +227,36 @@ aspectRatio: "52"
 
 ```cpp 
 void solve(vector<int>& candidates, int& n, int idx, int& target, int sum,vector<int> arr, vector<vector<int>>& ans){
-        if(sum > target) return;
+	if(sum > target) return;
 
-        if(sum == target){
-            ans.push_back(arr);
-            return;
-        }
+	if(sum == target){
+		ans.push_back(arr);
+		return;
+	}
 
-        for(int i = idx;i<n;i++){
-            if(i == idx || candidates[i] != candidates[i-1]){ // the condition in the video is complex whereas this condition is straight forward...
-                vector<int> arr1 = arr;
-                arr1.push_back(candidates[i]);
-                int sum1 = sum + candidates[i];
-                solve(candidates,n,i+1,target, sum1, arr1, ans);
-            }
-        }
-        
+	for(int i = idx;i<n;i++){
+		if(i == idx || candidates[i] != candidates[i-1]){ // the condition in the video is complex whereas this condition is straight forward...
+			vector<int> arr1 = arr;
+			arr1.push_back(candidates[i]);
+			int sum1 = sum + candidates[i];
+			solve(candidates,n,i+1,target, sum1, arr1, ans);
+		}
+	}
+	
 
-    }
-    
-    vector<vector<int>> combinationSum2(vector<int>& candidates, int target) {
-        vector<vector<int>> ans;
-        int idx = 0;
-        int n = candidates.size();
-        vector<int> arr;
-        sort(candidates.begin(), candidates.end());
-        int sum = 0;
-        solve(candidates,n,idx,target,sum,arr,ans);
+}
 
-        return ans;
-    }
+vector<vector<int>> combinationSum2(vector<int>& candidates, int target) {
+	vector<vector<int>> ans;
+	int idx = 0;
+	int n = candidates.size();
+	vector<int> arr;
+	sort(candidates.begin(), candidates.end());
+	int sum = 0;
+	solve(candidates,n,idx,target,sum,arr,ans);
+
+	return ans;
+}
 ```
 
 ### 
