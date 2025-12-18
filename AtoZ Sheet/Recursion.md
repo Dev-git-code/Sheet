@@ -388,6 +388,43 @@ vector<vector<int>> combinationSum2(vector<int>& candidates, int target) {
 }
 ```
 
+```cpp 
+// using backtracking 
+
+void solve(vector<int>& candidates, int& n, int idx, int& target, int sum,vector<int> arr, vector<vector<int>>& ans){
+	if(sum > target) return;
+
+	if(sum == target){
+		ans.push_back(arr);
+		return;
+	}
+
+	for(int i = idx;i<n;i++){
+		if(i == idx || candidates[i] != candidates[i-1]){ // the condition in the video is complex whereas this condition is straight forward...
+			arr.push_back(candidates[i]);
+			sum = sum + candidates[i];
+			solve(candidates,n,i+1,target, sum, arr, ans);
+			// backtrack
+			sum = sum - candidates[i];
+			arr.pop_back();
+		}
+	}
+
+}
+
+vector<vector<int>> combinationSum2(vector<int>& candidates, int target) {
+	vector<vector<int>> ans;
+	int idx = 0;
+	int n = candidates.size();
+	vector<int> arr;
+	sort(candidates.begin(), candidates.end());
+	int sum = 0;
+	solve(candidates,n,idx,target,sum,arr,ans);
+
+	return ans;
+}
+```
+
 ### 5. Subset Sum I 
 
 ```embed
@@ -409,6 +446,7 @@ aspectRatio: "100"
 ```
 
 ```cpp 
+// using simple recursion
 void solve(vector<int>& arr, int& n, int i, int sum, vector<int>& ans){
 	if(i==n){
 		ans.push_back(sum);
@@ -417,6 +455,29 @@ void solve(vector<int>& arr, int& n, int i, int sum, vector<int>& ans){
 	
 	int sum1 = sum + arr[i];
 	solve(arr, n, i+1, sum1, ans);
+	solve(arr, n, i+1, sum, ans);
+}
+vector<int> subsetSums(vector<int>& arr) {
+	int n = arr.size();
+	int i = 0;
+	vector<int> ans;
+	int sum = 0;
+	solve(arr,n,i,sum,ans);
+	return ans;
+}
+```
+
+```cpp 
+//using backtracking
+void solve(vector<int>& arr, int& n, int i, int sum, vector<int>& ans){
+	if(i==n){
+		ans.push_back(sum);
+		return;
+	}
+	
+	sum = sum + arr[i];
+	solve(arr, n, i+1, sum, ans);
+	sum = sum - arr[i];
 	solve(arr, n, i+1, sum, ans);
 }
 vector<int> subsetSums(vector<int>& arr) {
