@@ -54,10 +54,12 @@ favicon: ""
 aspectRatio: "100"
 ```
 
+- For the above problem using the code : all the test cases will not pass, but that's fine because the goal here is to learn recursion and backtracking.
 ```cpp 
 
 // this is simple recursion this can be written using backtracking also, as given in the above video
 void solve(vector<int>& arr,int idx, int k, long long sum, long long& ways){
+	if(sum > k) return;
 	if(idx == arr.size()){
 		if(sum == k) ways++;
 		return;
@@ -87,6 +89,8 @@ int findWays(vector<int>& arr, int k)
 
 ```cpp 
 void solve(vector<int>& arr,int idx, int k, long long sum, long long& ways){
+	
+	if(sum > k) return;
 	if(idx == arr.size()){
 		if(sum == k) ways++;
 		return;
@@ -116,8 +120,8 @@ int findWays(vector<int>& arr, int k)
 
 ```cpp 
 int solve(vector<int>& arr,int& n,int idx, int k, long long sum){
-
-	if(sum == k) return 0;
+	
+	if(sum > k) return 0;
 	if(idx == n){
 		if(sum == k) return 1;
 		else return 0;
@@ -149,8 +153,8 @@ int findWays(vector<int>& arr, int k)
 // solution using backtracking
 
 int solve(vector<int>& arr,int& n,int idx, int k, long long sum){
-
-	if(sum == k) return 0;
+	
+	if(sum > k) return 0;
 	if(idx == n){
 		if(sum == k) return 1;
 		else return 0;
@@ -215,6 +219,35 @@ bool checkSubsequenceSum(int n, vector<int>& arr, int k) {
 }
 ```
 
+```cpp 
+// using backtracking 
+bool solve(vector<int>& arr, int& n, int i, int& k, int sum){
+	if(sum > k) return false;
+	if(i==n){
+		if(sum == k) return true;
+		else return false;
+	}
+	
+	int sum = sum + arr[i];
+	
+	if(solve(arr, n, i+1, k, sum) == true){
+		return true;
+	}
+	int sum = sum - arr[i];
+	
+	if(solve(arr, n, i+1, k, sum) == true){
+		return true;
+	}
+	
+	return false;
+}
+bool checkSubsequenceSum(int n, vector<int>& arr, int k) {
+	int i = 0;
+	int sum = 0;
+	return solve(arr,n,i,k,sum);
+	
+}
+```
 ### 3. Combination Sum
 
 ```embed
