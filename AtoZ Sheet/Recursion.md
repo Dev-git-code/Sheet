@@ -206,3 +206,58 @@ vector<vector<int>> combinationSum(vector<int>& candidates, int target) {
 }
 ```
 
+### 4. Combination Sum-II
+
+```embed
+title: "L9. Combination Sum II | Leetcode | Recursion | Java | C++"
+image: "https://i.ytimg.com/vi/G1fRTGRxXU8/maxresdefault.jpg"
+description: "Check out TUF+:https://takeuforward.org/plus?source=youtubeFind DSA, LLD, OOPs, Core Subjects, 1000+ Premium Questions company wise, Aptitude, SQL, AI doubt ..."
+url: "https://www.youtube.com/watch?v=G1fRTGRxXU8"
+favicon: ""
+aspectRatio: "56.25"
+```
+
+```embed
+title: "Combination Sum II - LeetCode"
+image: "https://leetcode.com/static/images/LeetCode_Sharing.png"
+description: "Can you solve this real interview question? Combination Sum II - Given a collection of candidate numbers (candidates) and a target number (target), find all unique combinations in candidates where the candidate numbers sum to target.  Each number in candidates may only be used once in the combination.  Note: The solution set must not contain duplicate combinations.     Example 1:   Input: candidates = [10,1,2,7,6,1,5], target = 8 Output:  [ [1,1,6], [1,2,5], [1,7], [2,6] ]   Example 2:   Input: candidates = [2,5,2,1,2], target = 5 Output:  [ [1,2,2], [5] ]      Constraints:   * 1 <= candidates.length <= 100  * 1 <= candidates[i] <= 50  * 1 <= target <= 30"
+url: "https://leetcode.com/problems/combination-sum-ii/"
+favicon: ""
+aspectRatio: "52"
+```
+
+```cpp 
+void solve(vector<int>& candidates, int& n, int idx, int& target, int sum,vector<int> arr, vector<vector<int>>& ans){
+        if(sum > target) return;
+
+        if(sum == target){
+            ans.push_back(arr);
+            return;
+        }
+
+        for(int i = idx;i<n;i++){
+            if(i == idx || candidates[i] != candidates[i-1]){ // the condition in the video is complex whereas this condition is straight forward...
+                vector<int> arr1 = arr;
+                arr1.push_back(candidates[i]);
+                int sum1 = sum + candidates[i];
+                solve(candidates,n,i+1,target, sum1, arr1, ans);
+            }
+        }
+        
+
+    }
+    
+    vector<vector<int>> combinationSum2(vector<int>& candidates, int target) {
+        vector<vector<int>> ans;
+        int idx = 0;
+        int n = candidates.size();
+        vector<int> arr;
+        sort(candidates.begin(), candidates.end());
+        int sum = 0;
+        solve(candidates,n,idx,target,sum,arr,ans);
+
+        return ans;
+    }
+```
+
+### 
