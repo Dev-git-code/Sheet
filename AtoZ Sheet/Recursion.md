@@ -573,5 +573,40 @@ aspectRatio: "52"
 ```
 
 ```cpp 
+void solve(vector<int>& nums, int i, int& k, int& n, int& sum, vector<int>& arr, vector<vector<int>>& ans){
 
+	if(sum > n) return;
+	
+	if(arr.size() == k){
+		if(sum == n){
+			ans.push_back(arr);
+		}
+		return;
+	}
+	
+	if(i == 9) return; //this condition cannot come at the start as it will not allow to print the ans when [0..8] nums is considered
+	// giving wrong ans for k = 9 and n = 45
+   
+	sum = sum + nums[i];
+	arr.push_back(nums[i]);
+
+	solve(nums, i+1, k, n, sum, arr, ans);
+
+	sum = sum - nums[i];
+	arr.pop_back();
+
+	solve(nums, i+1, k, n, sum, arr, ans);
+}
+
+vector<vector<int>> combinationSum3(int k, int n) {
+	vector<int> nums = {1,2,3,4,5,6,7,8,9};
+	vector<vector<int>>  ans;
+	vector<int> arr;
+	int sum = 0;
+	int i = 0;
+	solve(nums,i,k,n,sum,arr,ans);
+	return ans;
+}
 ```
+
+### 8. 
