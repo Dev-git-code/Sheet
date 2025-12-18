@@ -320,3 +320,28 @@ favicon: ""
 aspectRatio: "52"
 ```
 
+```cpp 
+void subsets(vector<int>& nums, int& n, int idx, vector<int> arr, vector<vector<int>>& ans){
+
+	ans.push_back(arr);
+
+	for(int i = idx;i<n;i++){
+		if(i == idx || nums[i]!=nums[i-1]){
+			vector<int> arr1 = arr;
+			arr1.push_back(nums[i]);
+			subsets(nums, n, i+1, arr1, ans);
+		}
+	}
+}
+
+vector<vector<int>> subsetsWithDup(vector<int>& nums) {
+	int n = nums.size();
+	sort(nums.begin(), nums.end());
+	vector<vector<int>> ans;
+	vector<int> arr;
+	int idx = 0;
+	subsets(nums, n, idx, arr, ans);
+	return ans;
+}
+```
+
