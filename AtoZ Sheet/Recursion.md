@@ -300,3 +300,23 @@ vector<int> subsetSums(vector<int>& arr) {
 }
 ```
 
+### 6. Subsets II
+
+```embed
+title: "L11. Subset Sum II | Leetcode | Recursion"
+image: "https://i.ytimg.com/vi/RIn3gOkbhQE/maxresdefault.jpg"
+description: "Check out TUF+:https://takeuforward.org/plus?source=youtubeFind DSA, LLD, OOPs, Core Subjects, 1000+ Premium Questions company wise, Aptitude, SQL, AI doubt ..."
+url: "https://www.youtube.com/watch?v=RIn3gOkbhQE"
+favicon: ""
+aspectRatio: "56.25"
+```
+
+```embed
+title: "Subsets II - LeetCode"
+image: "https://leetcode.com/static/images/LeetCode_Sharing.png"
+description: "Can you solve this real interview question? Subsets II - Given an integer array nums that may contain duplicates, return all possible subsets (the power set).  The solution set must not contain duplicate subsets. Return the solution in any order.     Example 1:  Input: nums = [1,2,2] Output: [[],[1],[1,2],[1,2,2],[2],[2,2]]   Example 2:  Input: nums = [0] Output: [[],[0]]      Constraints:   * 1 <= nums.length <= 10  * -10 <= nums[i] <= 10"
+url: "https://leetcode.com/problems/subsets-ii/description/"
+favicon: ""
+aspectRatio: "52"
+```
+
