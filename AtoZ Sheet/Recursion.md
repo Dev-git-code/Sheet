@@ -259,4 +259,44 @@ vector<vector<int>> combinationSum2(vector<int>& candidates, int target) {
 }
 ```
 
-### 
+### 5. Subset Sum I 
+
+```embed
+title: "L10. Subset Sum I | Recursion | C++ | Java"
+image: "https://i.ytimg.com/vi/rYkfBRtMJr8/maxresdefault.jpg"
+description: "Check out TUF+:https://takeuforward.org/plus?source=youtubeFind DSA, LLD, OOPs, Core Subjects, 1000+ Premium Questions company wise, Aptitude, SQL, AI doubt ..."
+url: "https://www.youtube.com/watch?v=rYkfBRtMJr8"
+favicon: ""
+aspectRatio: "56.25"
+```
+
+```embed
+title: "Subset Sums | Practice | GeeksforGeeks "
+image: "https://media.geeksforgeeks.org/wp-content/cdn-uploads/gfg_200x200-min.png"
+description: " Given a array arr of integers, return the sums of all subsets in the list.&nbsp; Return the sums in any order. Examples: Input: arr[] = [2, 3] Output: [0, 2, 3, 5] Explanation: When no elements are taken then Sum = 0. When only 2 is taken then Sum ="
+url: "https://www.geeksforgeeks.org/problems/subset-sums2234/1"
+favicon: ""
+aspectRatio: "100"
+```
+
+```cpp 
+void solve(vector<int>& arr, int& n, int i, int sum, vector<int>& ans){
+	if(i==n){
+		ans.push_back(sum);
+		return;
+	}
+	
+	int sum1 = sum + arr[i];
+	solve(arr, n, i+1, sum1, ans);
+	solve(arr, n, i+1, sum, ans);
+}
+vector<int> subsetSums(vector<int>& arr) {
+	int n = arr.size();
+	int i = 0;
+	vector<int> ans;
+	int sum = 0;
+	solve(arr,n,i,sum,ans);
+	return ans;
+}
+```
+
