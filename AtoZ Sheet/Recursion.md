@@ -55,6 +55,8 @@ aspectRatio: "100"
 ```
 
 ```cpp 
+
+// this is simple recursion this can be written using backtracking also, as given in the above video
 void solve(vector<int>& arr,int idx, int k, long long sum, long long& ways){
 	if(idx == arr.size()){
 		if(sum == k) ways++;
@@ -67,6 +69,33 @@ void solve(vector<int>& arr,int idx, int k, long long sum, long long& ways){
 	sum1 += arr[idx];
 
 	solve(arr,idx+1,k,sum1,ways); // take
+	solve(arr,idx+1,k,sum2,ways); // not take
+}
+
+
+int findWays(vector<int>& arr, int k)
+{
+	long long ways = 0;
+	long long sum = 0;
+	int mod = 1e9 + 7;
+	int idx = 0;
+	solve(arr, idx, k, sum, ways);
+	return ways % mod;
+}
+
+```
+
+```cpp 
+void solve(vector<int>& arr,int idx, int k, long long sum, long long& ways){
+	if(idx == arr.size()){
+		if(sum == k) ways++;
+		return;
+	}
+	
+	sum += arr[idx];
+	solve(arr,idx+1,k,sum1,ways); // take
+	sum -= arr[idx]; // backtrack (remove the take element from the sum while coming back from recursion)
+	
 	solve(arr,idx+1,k,sum2,ways); // not take
 }
 
@@ -101,6 +130,37 @@ int solve(vector<int>& arr,int& n,int idx, int k, long long sum){
 
 	int l = solve(arr,n,idx+1,k,sum1); // take
 	int r = solve(arr,n,idx+1,k,sum2); // not take
+	
+	return l+r;
+}
+
+
+int findWays(vector<int>& arr, int k)
+{
+	long long sum = 0;
+	int mod = 1e9 + 7;
+	int idx = 0;
+	int n = arr.size();
+	return solve(arr, n, idx, k, sum);
+}
+```
+
+```cpp 
+// solution using backtracking
+
+int solve(vector<int>& arr,int& n,int idx, int k, long long sum){
+
+	if(sum == k) return 0;
+	if(idx == n){
+		if(sum == k) return 1;
+		else return 0;
+	}
+	
+	sum += arr[idx];
+	int l = solve(arr,n,idx+1,k,sum); // take
+	sum -= arr[idx]; // backtrack
+	
+	int r = solve(arr,n,idx+1,k,sum); // not take
 	
 	return l+r;
 }
