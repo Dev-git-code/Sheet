@@ -222,18 +222,18 @@ bool checkSubsequenceSum(int n, vector<int>& arr, int k) {
 ```cpp 
 // using backtracking 
 bool solve(vector<int>& arr, int& n, int i, int& k, int sum){
+
 	if(sum > k) return false;
 	if(i==n){
 		if(sum == k) return true;
 		else return false;
 	}
 	
-	int sum = sum + arr[i];
-	
+	sum = sum + arr[i];
 	if(solve(arr, n, i+1, k, sum) == true){
 		return true;
 	}
-	int sum = sum - arr[i];
+	sum = sum - arr[i];
 	
 	if(solve(arr, n, i+1, k, sum) == true){
 		return true;
@@ -269,7 +269,7 @@ aspectRatio: "52"
 ```
 
 ```cpp 
-
+// using simple recursion 
 void solve(vector<int>& candidates, int& n, int i, int target, int sum , vector<int> arr, vector<vector<int>>& ans){
 
 	if(i==n){
@@ -298,6 +298,41 @@ vector<vector<int>> combinationSum(vector<int>& candidates, int target) {
 }
 ```
 
+```cpp 
+// using backtracking 
+
+void solve(vector<int>& candidates, int& n, int i, int target, int sum , vector<int> arr, vector<vector<int>>& ans){
+
+	if(i==n){
+		if(sum == target) ans.push_back(arr);
+		return;
+	}
+
+	if(sum <= target){
+		sum = sum + candidates[i];
+		arr.push_back(candidates[i]);
+		
+		solve(candidates,n,i, target, sum, arr, ans); // i does not go to i+1 
+		// because one element can be picked multiple times
+		
+		// backtrack
+		sum = sum - candidates[i];
+		arr.pop_back();
+	}
+	
+	solve(candidates,n,i+1, target, sum, arr, ans);
+}
+
+vector<vector<int>> combinationSum(vector<int>& candidates, int target) {
+	vector<vector<int>> ans;
+	int n = candidates.size();
+	int i = 0;
+	vector<int> arr;
+	int sum = 0;
+	solve(candidates,n,i,target,sum,arr,ans);
+	return ans;
+}
+```
 ### 4. Combination Sum-II
 
 ```embed
@@ -319,6 +354,7 @@ aspectRatio: "52"
 ```
 
 ```cpp 
+// using simple recursion 
 void solve(vector<int>& candidates, int& n, int idx, int& target, int sum,vector<int> arr, vector<vector<int>>& ans){
 	if(sum > target) return;
 
