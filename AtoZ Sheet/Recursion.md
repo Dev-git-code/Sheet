@@ -609,4 +609,54 @@ vector<vector<int>> combinationSum3(int k, int n) {
 }
 ```
 
-### 8. 
+### 8. Letter Combinations of a Phone Number
+
+```embed
+title: "Letter Combinations of a Phone Number - LeetCode"
+image: "https://leetcode.com/static/images/LeetCode_Sharing.png"
+description: "Can you solve this real interview question? Letter Combinations of a Phone Number - Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent. Return the answer in any order.  A mapping of digits to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters.  [https://assets.leetcode.com/uploads/2022/03/15/1200px-telephone-keypad2svg.png]     Example 1:   Input: digits = \"23\" Output: [\"ad\",\"ae\",\"af\",\"bd\",\"be\",\"bf\",\"cd\",\"ce\",\"cf\"]   Example 2:   Input: digits = \"2\" Output: [\"a\",\"b\",\"c\"]      Constraints:   * 1 <= digits.length <= 4  * digits[i] is a digit in the range ['2', '9']."
+url: "https://leetcode.com/problems/letter-combinations-of-a-phone-number/description/"
+favicon: ""
+aspectRatio: "52"
+```
+
+```cpp 
+void solve(string& digits, int& n, unordered_map<char, vector<char>>& digitAlphaMap, int i, string op, vector<string>& ans){
+	if(digits == "") return;
+
+	if(i==n){
+		ans.push_back(op);
+		return;
+	}
+
+
+	vector<char> characters = digitAlphaMap[digits[i]];
+	for(int k = 0;k<characters.size();k++){
+		op.push_back(characters[k]);
+		solve(digits, n, digitAlphaMap, i+1, op, ans);
+		op.pop_back();
+	}
+
+}
+vector<string> letterCombinations(string digits) {
+
+	unordered_map<char, vector<char>> digitAlphaMap;
+	vector<string> ans;
+	int n = digits.size();
+
+	digitAlphaMap.insert({'2',{'a','b','c'}});
+	digitAlphaMap.insert({'3',{'d','e','f'}});
+	digitAlphaMap.insert({'4',{'g','h','i'}});
+	digitAlphaMap.insert({'5',{'j','k','l'}});
+	digitAlphaMap.insert({'6',{'m','n','o'}});
+	digitAlphaMap.insert({'7',{'p','q','r','s'}});
+	digitAlphaMap.insert({'8',{'t','u','v'}});
+	digitAlphaMap.insert({'9',{'w','x','y','z'}});
+
+	int i = 0;
+	string op = "";
+	solve(digits, n, digitAlphaMap, i, op, ans);
+	return ans;
+
+}
+```
