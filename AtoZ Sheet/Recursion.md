@@ -660,3 +660,61 @@ vector<string> letterCombinations(string digits) {
 
 }
 ```
+
+
+### 9. Palindrome Partitioning
+
+```embed
+title: "L17. Palindrome Partitioning | Leetcode | Recursion | C++ | Java"
+image: "https://i.ytimg.com/vi/WBgsABoClE0/maxresdefault.jpg"
+description: "Check out TUF+:https://takeuforward.org/plus?source=youtubeFind DSA, LLD, OOPs, Core Subjects, 1000+ Premium Questions company wise, Aptitude, SQL, AI doubt ..."
+url: "https://www.youtube.com/watch?v=WBgsABoClE0"
+favicon: ""
+aspectRatio: "56.25"
+```
+
+```embed
+title: "Palindrome Partitioning - LeetCode"
+image: "https://leetcode.com/static/images/LeetCode_Sharing.png"
+description: "Can you solve this real interview question? Palindrome Partitioning - Given a string s, partition s such that every substring of the partition is a palindrome. Return all possible palindrome partitioning of s.     Example 1:  Input: s = \"aab\" Output: [[\"a\",\"a\",\"b\"],[\"aa\",\"b\"]]   Example 2:  Input: s = \"a\" Output: [[\"a\"]]      Constraints:   * 1 <= s.length <= 16  * s contains only lowercase English letters."
+url: "https://leetcode.com/problems/palindrome-partitioning/"
+favicon: ""
+aspectRatio: "52"
+```
+
+```cpp 
+bool isPalindrome(string& str, int s, int e){
+	while(s<=e){
+		if(str[s] != str[e]){
+			return false;
+		}
+		s++,e--;
+	}
+	return true;
+}
+void solve(string& s, int& n, int ind, vector<string> op, vector<vector<string>>& ans){
+	if(ind == n){
+		ans.push_back(op);
+		return;
+	}
+
+	for(int i = ind; i<n;i++){
+		if(isPalindrome(s,ind,i)){
+			op.push_back(s.substr(ind,i-ind+1));
+			solve(s,n,i+1,op,ans);
+			op.pop_back();
+		}
+	}
+}
+vector<vector<string>> partition(string s) {
+	int n = s.size();
+	int ind = 0;
+	vector<string> op;
+	vector<vector<string>> ans;
+
+	solve(s,n,ind,op,ans);
+	return ans;
+}
+```
+
+### 10. 
