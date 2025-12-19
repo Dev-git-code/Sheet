@@ -717,4 +717,5 @@ vector<vector<string>> partition(string s) {
 }
 ```
 
-### 10. 
+### 10. N-Queen
+
