@@ -796,4 +796,73 @@ vector<vector<string>> solveNQueens(int n) {
 ```
 
 - There is also a hashing solution for the board, but that is quite complex and not required for the interview. 
-### 11. 
+### 11. Rat in a Maze
+
+```embed
+title: "L19. Rat in A Maze | Backtracking"
+image: "https://i.ytimg.com/vi/bLGZhJlt4y0/maxresdefault.jpg"
+description: "Check out TUF+:https://takeuforward.org/plus?source=youtubeFind DSA, LLD, OOPs, Core Subjects, 1000+ Premium Questions company wise, Aptitude, SQL, AI doubt ..."
+url: "https://www.youtube.com/watch?v=bLGZhJlt4y0"
+favicon: ""
+aspectRatio: "56.25"
+```
+
+```embed
+title: "Rat in a Maze | Practice | GeeksforGeeks "
+image: "https://media.geeksforgeeks.org/wp-content/cdn-uploads/gfg_200x200-min.png"
+description: "Consider a rat placed at position (0, 0) in an n x n square matrix maze[][]. The rat's goal is to reach the destination at position (n-1, n-1). The rat can move in four possible directions:&nbsp;'U'(up),&nbsp;'D'(down),&nbsp;'L' (left),&nbsp;'R' (rig"
+url: "https://www.geeksforgeeks.org/problems/rat-in-a-maze-problem/1"
+favicon: ""
+aspectRatio: "100"
+```
+
+```cpp 
+void solve(vector<vector<int>>& maze, int& n, vector<vector<int>>& visited, int i, int j, string move, vector<string>& ans){
+	if(i == n-1 && j == n-1){
+		ans.push_back(move);
+		return;
+	}
+	
+	// down
+	if(i+1<n && !visited[i+1][j] && maze[i+1][j]==1){
+		visited[i][j] = 1;
+		solve(maze, n, visited, i+1, j, move+"D", ans);
+		visited[i][j] = 0;
+	}
+	
+	// left
+	if(j-1>=0 && !visited[i][j-1] && maze[i][j-1]==1){
+		visited[i][j] = 1;
+		solve(maze, n, visited, i, j-1, move+"L", ans);
+		visited[i][j] = 0;
+	}
+	
+	// right
+	if(j+1<n && !visited[i][j+1] && maze[i][j+1]==1){
+		visited[i][j] = 1;
+		solve(maze, n, visited, i, j+1, move+"R", ans);
+		visited[i][j] = 0;
+	}
+	
+	// up
+	if(i-1>=0 && !visited[i-1][j] && maze[i-1][j]==1){
+		visited[i][j] = 1;
+		solve(maze, n, visited, i-1, j, move+"U", ans);
+		visited[i][j] = 0;
+	}
+}
+
+vector<string> ratInMaze(vector<vector<int>>& maze) {
+	
+	vector<string> ans;
+	int n = maze.size();
+	vector<vector<int>> visited(n,vector<int> (n,0));
+	
+	int i = 0, j = 0;
+	string move = "";
+	
+	if(maze[0][0] == 1) solve(maze,n, visited, i, j, move, ans);
+	return ans;
+}
+```
+
