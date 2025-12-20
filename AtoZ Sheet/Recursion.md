@@ -34,6 +34,8 @@ double myPow(double x, int n) {
   return solve(x,N);
 }
 ```
+
+- There is also a different solution for this using bits, will check that later on.
 ### 2. Count or check subsequences/subsets with sum k
 
 ```embed
