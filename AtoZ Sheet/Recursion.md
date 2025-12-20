@@ -794,3 +794,6 @@ vector<vector<string>> solveNQueens(int n) {
 	return ans;
 }
 ```
+
+- There is also a hashing solution for the board, but that is quite complex and not required for the interview. 
+### 11. 
