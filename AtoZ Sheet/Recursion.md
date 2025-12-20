@@ -719,3 +719,78 @@ vector<vector<string>> partition(string s) {
 
 ### 10. N-Queen
 
+```embed
+title: "L14. N-Queens | Leetcode Hard | Backtracking"
+image: "https://i.ytimg.com/vi/i05Ju7AftcM/maxresdefault.jpg"
+description: "Check out TUF+:https://takeuforward.org/plus?source=youtubeFind DSA, LLD, OOPs, Core Subjects, 1000+ Premium Questions company wise, Aptitude, SQL, AI doubt ..."
+url: "https://www.youtube.com/watch?v=i05Ju7AftcM"
+favicon: ""
+aspectRatio: "56.25"
+```
+
+```embed
+title: "N-Queens - LeetCode"
+image: "https://leetcode.com/static/images/LeetCode_Sharing.png"
+description: "Can you solve this real interview question? N-Queens - The n-queens puzzle is the problem of placing n queens on an n x n chessboard such that no two queens attack each other.  Given an integer n, return all distinct solutions to the n-queens puzzle. You may return the answer in any order.  Each solution contains a distinct board configuration of the n-queens' placement, where 'Q' and '.' both indicate a queen and an empty space, respectively.     Example 1:  [https://assets.leetcode.com/uploads/2020/11/13/queens.jpg]   Input: n = 4 Output: [[\".Q..\",\"...Q\",\"Q...\",\"..Q.\"],[\"..Q.\",\"Q...\",\"...Q\",\".Q..\"]] Explanation: There exist two distinct solutions to the 4-queens puzzle as shown above   Example 2:   Input: n = 1 Output: [[\"Q\"]]      Constraints:   * 1 <= n <= 9"
+url: "https://leetcode.com/problems/n-queens/"
+favicon: ""
+aspectRatio: "52"
+```
+
+```cpp 
+bool isSafeLeft(vector<string>& board, int row, int col){
+	while(col>=0){
+		if(board[row][col] == 'Q') return false;
+		col--;
+	}
+	return true;
+}
+
+bool isSafeUpperDiagonal(vector<string>& board, int row, int col){
+	while(col>=0 && row>=0){
+		if(board[row][col] == 'Q') return false;
+		row--, col--;
+	}
+	return true;
+}
+
+bool isSafeLowerDiagonal(vector<string>& board, int row, int col){
+	int n = board.size();
+	while(row<n && col >= 0){
+		if(board[row][col] == 'Q') return false;
+		row++, col--;
+	}
+	return true;
+}
+
+bool isSafe(vector<string>& board, int row, int col){
+	return isSafeLeft(board, row, col) && isSafeUpperDiagonal(board, row, col) && isSafeLowerDiagonal(board, row, col);
+}
+
+void solve(vector<string> board, int colIdx, int& n, vector<vector<string>>& ans){
+
+	if(colIdx == n){
+	   ans.push_back(board);
+	   return;
+	}
+
+	for(int rowIdx = 0;rowIdx<n;rowIdx++){
+		if(isSafe(board, rowIdx, colIdx)){
+			board[rowIdx][colIdx] = 'Q';
+			solve(board,colIdx+1,n,ans);
+			board[rowIdx][colIdx] = '.';
+		}
+	}
+}
+
+vector<vector<string>> solveNQueens(int n) {
+	vector<vector<string>> ans;
+	vector<string> board;
+	string row(n,'.');
+	for(int i = 0;i<n;i++) board.push_back(row);
+
+	int colIdx = 0;
+	solve(board, colIdx, n, ans);
+	return ans;
+}
+```
