@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AtoZ Sheet/Recursion.md",
+                "file": "AtoZ Sheet/1Index.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Recursion"
+              "title": "1Index"
             }
           }
         ]
@@ -143,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "AtoZ Sheet/Recursion.md",
+                "file": "Setup.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Recursion"
+              "title": "Outline of Setup"
             }
           },
           {
@@ -163,7 +163,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -184,31 +184,22 @@
   },
   "active": "f3d8f51972f12855",
   "lastOpenFiles": [
-    "AtoZ Sheet/Arrays.md",
-    "AtoZ Sheet/Binary Trees and Binary Search Trees.md",
     "AtoZ Sheet/Recursion.md",
-    "AtoZ Sheet/Bit Manipulation.md",
-    "AtoZ Sheet/1Index.md",
-    "Recursion and DP notes/Aditya Verma Recursion Playlist.md",
+    "AtoZ Sheet/Arrays.md",
     "AtoZ Sheet/Sliding window.md",
-    "Recursion and DP notes/Aditya Verma DP Notes/Aditya Verma DP playlist.md",
-    "Recursion and DP notes/Aditya Verma DP Notes/Matrix Chain Multiplication.md",
-    "Recursion and DP notes/Aditya Verma DP Notes/Knapsack.md",
-    "Recursion and DP notes/Aditya Verma DP Notes/DP on Trees.md",
-    "AtoZ Sheet/Sliding Window and two pointer.md",
-    "Recursion and DP notes/Abdul Bari DP.md",
-    "Sliding window notes",
     "Setup.md",
-    "AtoZ Sheet/Binary Search.md",
-    "AtoZ Sheet/Basics.md",
-    "System Design/System Design Basics.md",
-    "System Design",
-    "AtoZ Sheet/Strings.md",
     "local_images/Arrays-1760243358660.png",
+    "AtoZ Sheet/1Index.md",
     "practice/prac.exe",
     "practice/prac.cpp",
     "practice",
     "New folder",
+    "AtoZ Sheet/Basics.md",
+    "Recursion and DP notes/Aditya Verma Recursion Playlist.md",
+    "Recursion and DP notes/Abdul Bari DP.md",
+    "Recursion and DP notes/Aditya Verma DP Notes/Matrix Chain Multiplication.md",
+    "Recursion and DP notes/Aditya Verma DP Notes/Knapsack.md",
+    "Recursion and DP notes/Aditya Verma DP Notes/Aditya Verma DP playlist.md",
     "copilot-custom-prompts/Rewrite as tweet thread.md",
     "copilot-custom-prompts/Rewrite as tweet.md",
     "copilot-custom-prompts/Remove URLs.md",
@@ -217,7 +208,15 @@
     "copilot-custom-prompts/Make longer.md",
     "copilot-custom-prompts/Make shorter.md",
     "copilot-custom-prompts/Emojify.md",
+    "copilot-custom-prompts/Explain like I am 5.md",
+    "copilot-custom-prompts/Simplify.md",
+    "copilot-custom-prompts/Summarize.md",
+    "copilot-custom-prompts/Translate to Chinese.md",
+    "copilot-custom-prompts/Fix grammar and spelling.md",
     "copilot-custom-prompts",
+    "AtoZ Sheet/Bit Manipulation.md",
+    "AtoZ Sheet/Binary Trees and Binary Search Trees.md",
+    "Untitled",
     "Recursion and DP notes/Aditya Verma DP Notes",
     "Topics",
     "Sheet/Sheet/Sheet/Concepts/Pasted image 20231229211941.png",
@@ -229,6 +228,7 @@
     "Pasted image 20250609133023.png",
     "Sheet/Sheet/Leetcode Practice/4.2 All Pairs Shortest Path (Floyd-Warshall) - Dynamic Programming 11-23 screenshot 1.png",
     "Sheet/Sheet/Leetcode Practice/4.2 All Pairs Shortest Path (Floyd-Warshall) - Dynamic Programming 6-27 screenshot 1.png",
-    "local_images"
+    "local_images",
+    "AtoZ Sheet"
   ]
 }
