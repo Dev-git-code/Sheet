@@ -34,7 +34,8 @@
               "title": "Low Level Design"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -195,10 +196,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "4af3c57436309524",
+  "active": "0d3470eeecc5af81",
   "lastOpenFiles": [
-    "Low Level Design/Low Level Design.md",
     "Low Level Design/[O`Reilly. Head First] - Head First Design Patterns - [Freeman].pdf",
+    "Low Level Design/Low Level Design.md",
+    "local_images/Low Level Design-1766476718298.png",
     "Setup.md",
     "Untitled",
     "AtoZ Sheet/1Index.md",
@@ -240,7 +242,6 @@
     "local_images/3b0da588668947394dfbd6369aa3a610_MD5.jpeg",
     "Pasted image 20250609133108.png",
     "Pasted image 20250609133023.png",
-    "Sheet/Sheet/Leetcode Practice/4.2 All Pairs Shortest Path (Floyd-Warshall) - Dynamic Programming 11-23 screenshot 1.png",
-    "Sheet/Sheet/Leetcode Practice/4.2 All Pairs Shortest Path (Floyd-Warshall) - Dynamic Programming 6-27 screenshot 1.png"
+    "Sheet/Sheet/Leetcode Practice/4.2 All Pairs Shortest Path (Floyd-Warshall) - Dynamic Programming 11-23 screenshot 1.png"
   ]
 }
