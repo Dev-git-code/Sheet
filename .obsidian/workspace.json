@@ -37,13 +37,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Nicos Weg.md",
+                "file": "German/Learn German A1.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Nicos Weg"
+              "title": "Learn German A1"
             }
           }
         ],
@@ -209,8 +209,9 @@
   },
   "active": "9c94860a23931e21",
   "lastOpenFiles": [
+    "German/Nicos Weg.md",
+    "German/Learn German A1.md",
     "Low Level Design/[O`Reilly. Head First] - Head First Design Patterns - [Freeman].pdf",
-    "Nicos Weg.md",
     "German",
     "Low Level Design/Low Level Design.md",
     "local_images/Low Level Design-1766476718298.png",
