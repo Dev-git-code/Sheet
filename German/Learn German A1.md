@@ -7,6 +7,15 @@ favicon: ""
 aspectRatio: "56.33802816901409"
 ```
 
+```embed
+title: "A1 Course - Learn German | A1 Kurs - Deutsch lernen"
+image: "https://learngermanoriginal.com/wp-content/uploads/2018/08/a1-lesson-1-768x432.jpg"
+description: "Complete A1 course for learning German for beginners. Guided A1 course for beginner's level along with worksheets to practice. A1 Kurs für Anfänger."
+url: "https://learngermanoriginal.com/courses/a1-course"
+favicon: ""
+aspectRatio: "56.25"
+```
+
 - For the ss, write the german version by yourself.
 ### Lec 2
 
