@@ -104,7 +104,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 286.5
+    "width": 286.5,
+    "collapsed": true
   },
   "right": {
     "id": "5ffdc532e2084318",
@@ -209,6 +210,7 @@
   },
   "active": "9c94860a23931e21",
   "lastOpenFiles": [
+    "local_images/Learn German A1-1766577383759.png",
     "German/Nicos Weg.md",
     "German/Learn German A1.md",
     "Low Level Design/[O`Reilly. Head First] - Head First Design Patterns - [Freeman].pdf",
@@ -243,7 +245,6 @@
     "copilot-custom-prompts/Explain like I am 5.md",
     "copilot-custom-prompts/Simplify.md",
     "copilot-custom-prompts/Summarize.md",
-    "copilot-custom-prompts/Translate to Chinese.md",
     "copilot-custom-prompts",
     "Recursion and DP notes/Aditya Verma DP Notes",
     "Topics",

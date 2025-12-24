@@ -7,3 +7,8 @@ favicon: ""
 aspectRatio: "56.33802816901409"
 ```
 
+- For the ss, write the german version by yourself.
+### Lec 2
+
+![[Learn German A1-1766577383759.png]]
+
