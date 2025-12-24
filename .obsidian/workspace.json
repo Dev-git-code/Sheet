@@ -23,15 +23,12 @@
             "id": "0d3470eeecc5af81",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Low Level Design/Low Level Design.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
+                "file": "Low Level Design/[O`Reilly. Head First] - Head First Design Patterns - [Freeman].pdf"
               },
-              "icon": "lucide-file",
-              "title": "Low Level Design"
+              "icon": "lucide-file-text",
+              "title": "[O`Reilly. Head First] - Head First Design Patterns - [Freeman]"
             }
           }
         ],
@@ -92,7 +89,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 286.5
+    "width": 286.5,
+    "collapsed": true
   },
   "right": {
     "id": "5ffdc532e2084318",
@@ -197,8 +195,8 @@
   },
   "active": "0d3470eeecc5af81",
   "lastOpenFiles": [
-    "Low Level Design/[O`Reilly. Head First] - Head First Design Patterns - [Freeman].pdf",
     "Low Level Design/Low Level Design.md",
+    "Low Level Design/[O`Reilly. Head First] - Head First Design Patterns - [Freeman].pdf",
     "local_images/Low Level Design-1766476718298.png",
     "Setup.md",
     "Untitled",
