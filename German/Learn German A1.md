@@ -17,7 +17,14 @@ aspectRatio: "56.25"
 ```
 
 - For the ss, write the german version by yourself.
-### Lec 2
+### Lektion 2
 
 ![[Learn German A1-1766577383759.png]]
+
+## Lektion 7 
+
+![[Learn German A1-1766813649924.png]]
+
+![[Learn German A1-1766813666321.png]]
+
 
