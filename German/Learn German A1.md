@@ -27,4 +27,9 @@ aspectRatio: "56.25"
 
 ![[Learn German A1-1766813666321.png]]
 
+## Lektion 9 
 
+![[Learn German A1-1766816922732.png]]
+
+**What does “the subject conjugates the verb” mean?**
+👉 The form of the verb changes depending on the subject.
