@@ -92,7 +92,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 286.5
+    "width": 286.5,
+    "collapsed": true
   },
   "right": {
     "id": "5ffdc532e2084318",
@@ -197,8 +198,8 @@
   },
   "active": "0d3470eeecc5af81",
   "lastOpenFiles": [
-    "Low Level Design/[O`Reilly. Head First] - Head First Design Patterns - [Freeman].pdf",
     "German/Learn German A1.md",
+    "Low Level Design/[O`Reilly. Head First] - Head First Design Patterns - [Freeman].pdf",
     "local_images/Learn German A1-1766577383759.png",
     "German/Nicos Weg.md",
     "German",
