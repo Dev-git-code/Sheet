@@ -168,7 +168,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -184,6 +185,9 @@
   },
   "active": "26b93a45d6f26ece",
   "lastOpenFiles": [
+    "local_images/Learn German A1-1766897960009.png",
+    "local_images/Learn German A1-1766897956823.png",
+    "local_images/Learn German A1-1766897941211.png",
     "local_images/Learn German A1-1766897711084.png",
     "local_images/Learn German A1-1766897633383.png",
     "local_images/Learn German A1-1766896747429.png",
@@ -192,9 +196,6 @@
     "local_images/Learn German A1-1766832529736.png",
     "local_images/Learn German A1-1766832343293.png",
     "local_images/Learn German A1-1766832211476.png",
-    "local_images/Learn German A1-1766831615299.png",
-    "local_images/Learn German A1-1766830939142.png",
-    "local_images/Learn German A1-1766830936166.png",
     "Recursion and DP notes/Aditya Verma Recursion Playlist.md",
     "AtoZ Sheet/Recursion.md",
     "German/Learn German A1.md",
