@@ -106,3 +106,7 @@ aspectRatio: "56.25"
 
 ![[Learn German A1-1766906017509.png]]
 
+## Lektion 27 
+
+![[Learn German A1-1766906520283.png]]
+
