@@ -79,7 +79,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "5ffdc532e2084318",
@@ -143,13 +144,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Setup.md",
+                "file": "German/Learn German A1.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Setup"
+              "title": "Outline of Learn German A1"
             }
           },
           {
@@ -163,12 +164,11 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 284.5,
-    "collapsed": true
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -184,6 +184,8 @@
   },
   "active": "26b93a45d6f26ece",
   "lastOpenFiles": [
+    "local_images/Learn German A1-1766897711084.png",
+    "local_images/Learn German A1-1766897633383.png",
     "local_images/Learn German A1-1766896747429.png",
     "local_images/Learn German A1-1766834847462.png",
     "local_images/Learn German A1-1766833446674.png",
@@ -197,8 +199,6 @@
     "AtoZ Sheet/Recursion.md",
     "German/Learn German A1.md",
     "German/Nicos Weg.md",
-    "local_images/Learn German A1-1766824220734.png",
-    "local_images/Learn German A1-1766824193233.png",
     "Low Level Design/[O`Reilly. Head First] - Head First Design Patterns - [Freeman].pdf",
     "German",
     "Low Level Design/Low Level Design.md",
