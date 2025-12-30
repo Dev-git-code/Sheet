@@ -26,12 +26,15 @@
             "id": "085a7d3fabc41e7a",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Low Level Design/[O`Reilly. Head First] - Head First Design Patterns - [Freeman].pdf"
+                "file": "German/Nicos Weg.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
               },
-              "icon": "lucide-file-text",
-              "title": "[O`Reilly. Head First] - Head First Design Patterns - [Freeman]"
+              "icon": "lucide-file",
+              "title": "Nicos Weg"
             }
           }
         ],
@@ -127,12 +130,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "AtoZ Sheet/Arrays.md",
+                "file": "German/Nicos Weg.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Arrays"
+              "title": "Outgoing links from Nicos Weg"
             }
           },
           {
@@ -156,13 +159,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Low Level Design/[O`Reilly. Head First] - Head First Design Patterns - [Freeman].pdf",
+                "file": "German/Nicos Weg.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of [O`Reilly. Head First] - Head First Design Patterns - [Freeman]"
+              "title": "Outline of Nicos Weg"
             }
           },
           {
@@ -176,12 +179,11 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -197,9 +199,9 @@
   },
   "active": "085a7d3fabc41e7a",
   "lastOpenFiles": [
+    "Low Level Design/[O`Reilly. Head First] - Head First Design Patterns - [Freeman].pdf",
     "Low Level Design/Low Level Design.md",
     "local_images/Low Level Design-1766992688187.png",
-    "Low Level Design/[O`Reilly. Head First] - Head First Design Patterns - [Freeman].pdf",
     "local_images/Low Level Design-1766992125976.png",
     "German/Learn German A1.md",
     "local_images/Learn German A1-1766906520283.png",
