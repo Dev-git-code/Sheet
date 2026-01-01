@@ -26,12 +26,15 @@
             "id": "085a7d3fabc41e7a",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Low Level Design/[O`Reilly. Head First] - Head First Design Patterns - [Freeman].pdf"
+                "file": "Recursion and DP notes/Aditya Verma Recursion Playlist.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
               },
-              "icon": "lucide-file-text",
-              "title": "[O`Reilly. Head First] - Head First Design Patterns - [Freeman]"
+              "icon": "lucide-file",
+              "title": "Aditya Verma Recursion Playlist"
             }
           }
         ],
@@ -197,9 +200,10 @@
   },
   "active": "085a7d3fabc41e7a",
   "lastOpenFiles": [
+    "AtoZ Sheet/Recursion.md",
+    "Low Level Design/[O`Reilly. Head First] - Head First Design Patterns - [Freeman].pdf",
     "Low Level Design/Low Level Design.md",
     "German/Nicos Weg.md",
-    "Low Level Design/[O`Reilly. Head First] - Head First Design Patterns - [Freeman].pdf",
     "local_images/Low Level Design-1766992688187.png",
     "local_images/Low Level Design-1766992125976.png",
     "German/Learn German A1.md",
@@ -212,7 +216,6 @@
     "local_images/Learn German A1-1766897941211.png",
     "local_images/Learn German A1-1766897711084.png",
     "Recursion and DP notes/Aditya Verma Recursion Playlist.md",
-    "AtoZ Sheet/Recursion.md",
     "German",
     "Setup.md",
     "AtoZ Sheet/1Index.md",
