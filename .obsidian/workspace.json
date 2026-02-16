@@ -36,9 +36,21 @@
               "icon": "lucide-file",
               "title": "Learn German A1"
             }
+          },
+          {
+            "id": "41e7c8b903808431",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.11.7"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.11.7"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -198,7 +210,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "085a7d3fabc41e7a",
+  "active": "41e7c8b903808431",
   "lastOpenFiles": [
     "German/Nicos Weg.md",
     "German/Learn German A1.md",
